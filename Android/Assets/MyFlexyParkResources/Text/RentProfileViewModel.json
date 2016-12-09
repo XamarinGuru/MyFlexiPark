@@ -1,0 +1,13 @@
+﻿{
+    "PageTitle": "Buy credits",
+    "BackTitle" : "Back",
+	"CreditCardNumberText" : "Credit card number:",
+	"CreditCardHolderNameText" : "Credit card holder name:",
+	"CreditCardCryptogramText" : "Credit card cryptogram:",
+	"ValidityText" : "Validity:",
+	"PickText" : "Pick",
+	"Remove" : "Remove",
+	"Add" : "Add",
+    "BuyText" : "Buy now",
+    "CreditsText" : "Credits",
+}

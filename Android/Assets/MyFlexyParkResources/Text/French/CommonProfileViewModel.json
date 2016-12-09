@@ -1,0 +1,15 @@
+﻿{
+   "FirstNameText" :  "Nom",
+   "LastNameText" :  "Prénom",
+   "EmailText" :  "Email",
+   "PasswordText" :  "Mot de passe",
+   "MobileNumberText" :  "Téléphone portable",
+   "PromoCodeText" :  "Code Promo",
+   "TermsOfUseVersionText" : "Condition d’utilisation:",
+   "CreatedDateText" : "Date de création:",
+   "ReadTermsOfUseText" :  "Lire les conditions d’utilisation",
+   "IAcceptYourTermsOfUseText" :  "J’accepte les conditions d’utilisation",
+   "OkText" : "Ok",
+   "PageTitle" : "Habituel",
+	"BackTitle" : "Retour",
+}

@@ -1,0 +1,9 @@
+{
+	"PageTitle": "Add spot accuracy",
+	"BackTitle" : "Back",
+	"PleaseWaitText" : "Please wait until the GPS target accuracy is reached.",
+	"CurrentGPSAccuracyText" : "Current GPS accuracy :",
+	"CurrentGPSCoorText" : "Current GPS coordinates :",
+	"GPSTargetText" :  "GPS target accuracy :",
+	"IfYourText" : "If your device is not able to reach the GPS target accuracy in two minutes please try with another device or contact the company (info@myflexypark.be)"
+}

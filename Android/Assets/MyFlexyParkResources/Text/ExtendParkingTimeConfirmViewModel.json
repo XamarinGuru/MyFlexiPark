@@ -1,0 +1,14 @@
+﻿{
+	"PageTitle": "",
+	"BackTitle" : "Back",
+	"BeforeRemovingThisFormText" : "before removing this form",
+	"ExtendingText" : "Extending",
+	"CostText" : "Cost:",
+	"DurationText" : "Duration:",
+	"EndOfReservationText" : "End of reservation:",
+	"VehicleText" : "Vehicle:",
+	"PayWithCreditsText" : "Pay",
+	"RemainingCreditsText" : "Remaining credits:",
+	"BuyCreditsText" : "Buy credits",
+	
+}

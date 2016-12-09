@@ -1,0 +1,10 @@
+﻿{
+
+	"CreditCardNumberText" : "Credit card number:",
+	"CreditCardHolderNameText" : "Credit card holder name:",
+	"CreditCardCryptogramText" : "Credit card cryptogram:",
+	"ValidityText" : "Validity:",
+	"PickText" : "Pick",
+	"VehicleManagementText" : "Vehicle management",
+
+}

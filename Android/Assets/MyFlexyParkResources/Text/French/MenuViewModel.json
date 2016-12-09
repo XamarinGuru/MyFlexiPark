@@ -1,0 +1,10 @@
+﻿{
+   "PageTitle": "Menu",
+   "BackTitle" :  "Retour",
+   "ParkMeText" :  "Gare-moi",
+   "MyReservationsText" :  "Mes réservations",
+   "MyOwnParkingText" :  "Mon propre parking",
+   "CreditsText" :  "Crédits",
+   "NowText" :  "Maintenant",
+   "LaterText" : "Plus tard",
+}

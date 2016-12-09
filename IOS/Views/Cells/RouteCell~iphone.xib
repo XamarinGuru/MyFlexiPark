@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="cxk-wN-pdQ" customClass="RouteCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nw9-Fy-3Wu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSm-dA-8Vd" userLabel="Instruction">
+                                <rect key="frame" x="10" y="10" width="250" height="20"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="9999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2cc-zD-zuN" userLabel="Distance">
+                                <rect key="frame" x="270" y="10" width="40" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="9Vy-jl-d79"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2cc-zD-zuN" firstAttribute="leading" secondItem="xSm-dA-8Vd" secondAttribute="trailing" constant="10" id="Ncn-Lm-sAa"/>
+                            <constraint firstAttribute="centerY" secondItem="2cc-zD-zuN" secondAttribute="centerY" id="Rmk-Gw-jzu"/>
+                            <constraint firstItem="xSm-dA-8Vd" firstAttribute="leading" secondItem="nw9-Fy-3Wu" secondAttribute="leading" constant="10" id="bq5-XX-xEo"/>
+                            <constraint firstAttribute="trailing" secondItem="2cc-zD-zuN" secondAttribute="trailing" constant="10" id="hyq-BU-xpA"/>
+                            <constraint firstAttribute="centerY" secondItem="xSm-dA-8Vd" secondAttribute="centerY" id="pxf-4O-DzZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                <constraints>
+                    <constraint firstItem="nw9-Fy-3Wu" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="E7g-IV-9HL"/>
+                    <constraint firstAttribute="bottom" secondItem="nw9-Fy-3Wu" secondAttribute="bottom" id="VKJ-zy-KGA"/>
+                    <constraint firstItem="nw9-Fy-3Wu" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" id="XNj-fY-KPD"/>
+                    <constraint firstAttribute="trailing" secondItem="nw9-Fy-3Wu" secondAttribute="trailing" id="hxZ-0x-2tp"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="lbDistance" destination="2cc-zD-zuN" id="M7X-u7-d7a"/>
+                <outlet property="lbInstruction" destination="xSm-dA-8Vd" id="A2l-Az-Bjf"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>

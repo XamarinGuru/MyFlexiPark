@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="0.3" />
+            <MvxListView
+                android:paddingTop="@dimen/marginBase"
+                android:id="@+id/MvxListView"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="0.7"
+                android:divider="@android:color/transparent"
+                android:listSelector="@android:color/transparent"
+                android:dividerHeight="2dp"
+                local:MvxItemTemplate="@layout/itemeventcalendarview"
+                local:MvxBind="ItemsSource EventFilterByDay; ItemClick EventItemClickedCommand" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/ivCalendarBack"
+            android:layout_width="@dimen/marginBasex5"
+            android:layout_height="@dimen/marginBasex5"
+            android:layout_gravity="left"
+            android:layout_marginLeft="@dimen/marginBasex3"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/white_icon_back" />
+        <ImageView
+            android:id="@+id/ivCalendarNext"
+            android:layout_width="@dimen/marginBasex5"
+            android:layout_height="@dimen/marginBasex5"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:layout_marginRight="@dimen/marginBasex3"
+            android:layout_marginTop="2dp"
+            android:background="@drawable/white_icon_next" />
+    </FrameLayout>
+</LinearLayout>

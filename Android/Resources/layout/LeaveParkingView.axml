@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg"
+    android:splitMotionEvents="true"
+    android:weightSum="1">
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="?android:attr/actionBarSize"
+      android:background="#2487c8">
+    <RelativeLayout
+        android:id="@+id/rlBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        local:MvxBind="Click BackCommand">
+      <ImageView
+          android:id="@+id/ivBack"
+          android:layout_width="@dimen/marginBasex5"
+          android:layout_height="@dimen/marginBasex5"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="@dimen/marginBasex2"
+          android:background="@drawable/white_icon_back" />
+      <TextNeueBold
+          android:text="Back 69"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/ivBack"
+          android:layout_centerVertical="true"
+          android:textColor="#ffffffff"
+          android:textSize="@dimen/textMediumLarge"
+          local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+    </RelativeLayout>
+    <TextViewWithFont
+        android:text="Leave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/textMediumLarge"
+        local:MvxBind="Font 'helvetica-neue-bold.ttf'; Text TextSource, Converter = Language, ConverterParameter = PageTitle" />
+    <TextNeueBold
+        android:id="@+id/tvedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:text="Delete"
+        android:visibility="invisible"
+        android:textColor="#ffffff"
+        android:layout_alignParentRight="true"
+        android:textSize="@dimen/textMediumLarge"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/marginBasex2" />
+  </LinearLayout>
+  <ScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/marginBasex8"
+        android:layout_marginLeft="@dimen/marginBasex2"
+        android:layout_marginRight="@dimen/marginBasex2"
+        android:paddingBottom="@dimen/marginBasex4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+      <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="fill_parent"
+          android:layout_height="wrap_content"
+          android:gravity="right|center_vertical">
+        <TextRegular
+            android:text="I liked this spot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/textMediumLarge"
+            android:layout_marginRight="@dimen/marginBasex5"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_vertical"
+            local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = ILikedThisSpotText" />
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:checked="true"
+            local:MvxBind="Checked IsLikedThisSpot" />
+      </LinearLayout>
+      <TextRegular
+          android:text="Your comment"
+          android:textColor="#ffffff"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textSize="@dimen/textMediumLarge"
+          android:layout_marginTop="@dimen/marginBasex5"
+          local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = YourCommentText" />
+      <EditTextRegular
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/marginBasex2"
+          android:textSize="@dimen/textMediumLarge"
+          android:singleLine="false"
+          android:background="@drawable/bg_edittext"
+         android:padding="@dimen/marginBasex2"
+          android:textColor="#000000"
+          android:gravity="left|top"
+          android:lines="12" />
+      <TextRegular
+          android:id="@+id/tvDone"
+          android:text="Done"
+          android:textColor="@color/text"
+          android:textSize="@dimen/textLarge"
+          android:layout_marginTop="@dimen/marginBasex2"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:paddingBottom="@dimen/marginBasex6"
+          android:gravity="center"
+          local:MvxBind="Click GoToMenuCommand; Text TextSource, Converter = Language, ConverterParameter = DoneText" />
+    </LinearLayout>
+  </ScrollView>
+</LinearLayout>

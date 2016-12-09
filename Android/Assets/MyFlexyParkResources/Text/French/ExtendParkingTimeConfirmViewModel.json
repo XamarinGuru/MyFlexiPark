@@ -1,0 +1,14 @@
+﻿{
+   "PageTitle": "",
+   "BackTitle" : "Retour",
+   "BeforeRemovingThisFormText" :  "bvant de retirer cette offre",
+   "ExtendingText" :  "Prolonger",
+   "CostText" :  "Coût:",
+   "DurationText" : "Durée:",
+   "EndOfReservationText" :  "Fin de réservation:",
+   "VehicleText" : "Véhicule:",
+   "PayWithCreditsText" :  "Payer",
+   "RemainingCreditsText" :  "Solde crédits:",
+   "BuyCreditsText" :  "Acheter crédits",
+   
+}

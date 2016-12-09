@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/marginBase"
+    android:paddingTop="@dimen/marginBase"
+    android:background="@drawable/listselector"
+    android:gravity="center_vertical"
+    android:padding="@dimen/marginBasex2"
+    android:orientation="vertical">
+    <TextRegular
+        android:layout_gravity="left|center_vertical"
+        android:text="Title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:singleLine="true"
+        android:textSize="@dimen/textMediumLarge"
+        local:MvxBind="Text Title" />
+    <RowLayout
+        android:layout_marginTop="@dimen/marginBasex2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextRegular
+            android:layout_gravity="center_vertical"
+            android:text="Start Date:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:textSize="@dimen/textMediumLarge" />
+        <TextViewWithFont
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:layout_gravity="center_vertical"
+            android:text="Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'" />
+        <TextViewWithFont
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:layout_gravity="center_vertical"
+            android:text="Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'" />
+    </RowLayout>
+    <RowLayout
+        android:layout_marginTop="@dimen/marginBasex2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextRegular
+            android:layout_gravity="center_vertical"
+            android:text="End Date:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Text Location" />
+        <TextRegular
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:layout_gravity="center_vertical"
+            android:text="Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'" />
+        <TextRegular
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:layout_gravity="center_vertical"
+            android:text="Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'" />
+    </RowLayout>
+<!--<ImageView
+        android:layout_marginLeft="@dimen/marginBasex2"
+        android:layout_gravity="right|center_vertical"
+        android:layout_width="@dimen/marginBasex5"
+        android:layout_height="@dimen/marginBasex5"
+        android:background="@drawable/white_icon_edit_64"
+        local:MvxBind="Visible IsEditMode; Click GotoEditParkingSpotCommand" />
+    <ImageView
+        android:layout_marginLeft="@dimen/marginBasex2"
+        android:layout_gravity="right|center_vertical"
+        android:layout_width="@dimen/marginBasex5"
+        android:layout_height="@dimen/marginBasex5"
+        android:background="@drawable/white_icon_delete"-->
+</LinearLayout>

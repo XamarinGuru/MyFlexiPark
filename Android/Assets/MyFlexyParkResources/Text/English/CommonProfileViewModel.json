@@ -1,0 +1,16 @@
+﻿{
+
+	"FirstNameText" : "First name",
+	"LastNameText" : "Last name",
+	"EmailText" : "Email",
+	"PasswordText" : "Password",
+	"MobileNumberText" : "Mobile number",
+	"PromoCodeText" : "Promo code",
+	"TermsOfUseVersionText" : "Terms of Use version:",
+	"CreatedDateText" : "Created date:",
+	"ReadTermsOfUseText" : "Read Terms of Use",
+	"IAcceptYourTermsOfUseText" : "I accept your terms of use",
+	"OkText" : "OK"
+	
+
+}

@@ -1,0 +1,29 @@
+﻿{
+	 "PageTitle": "",
+   "BackTitle" :  "Retour",
+   "OfferMinutesText" :  "minutes offertes pour rejoindre le parking",
+   "AddressText" :  "Adresse",
+   "StartTimeText" : "Démarrage",
+   "EndTimeText" :  "Fin de la réservation",
+   "CostText" :  "Coût:",
+   "VehicleText" : "Véhicule",
+   "NavigateText" :  "Naviguer",
+   "LeaveText" :  "Quitter",
+   "ReportText" :  "Remarque",
+  
+ 
+	"EndTimeText" : "Fin de la réservation",
+	"LeaveThisParkingText" : "Etes-vous certain de vouloir quitter ce parking ?",
+	"ReportThisParkingText" : "Etes-vous certain de vouloir reporter ce parking ?",
+
+      "PleaseSelectText" : "Sélectionner une option",
+"WhichNavigationTypeText" : "Quel mode de navigation souhaitez-vous utiliser ?",
+"UsingNativeMapText" : "Utiliser le mode standard",
+"UsingWazeText" : "Utiliser Waze",
+"UsingGoogleMapsText" : "Utiliser Google Maps",
+"UsingNavmiiText" : "Utiliser Navmii",
+"CancelText" : "Annuler",
+
+
+
+}

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="@color/bg"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:id="@+id/rlHeader"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#2487c8">
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind=" Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+        <TextNeueBold
+            android:id="@+id/tvTitle"
+            android:text="Add a spot"
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Text Title" />
+    <!--RelativeLayout Virtual / Visibility = Invisible-->
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind=" Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <MvxListView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="2dp"
+            android:layout_weight="1"
+            local:MvxBind="ItemsSource Tasks; ItemClick ChooseTaskCommand"
+            local:MvxItemTemplate="@layout/itemaddspotview" />
+    <!--<FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <TextRegular
+                android:id="@+id/tvAddVirtual"
+                android:text="Add"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#808080"
+                android:layout_margin="@dimen/marginBasex2"
+                android:textSize="@dimen/textLarge"
+                local:MvxBind="Visible IsAddButtonEnabled, Converter = InverterBool; Text ButtonTitle" />
+            <TextRegular
+                android:id="@+id/tvAdd"
+                android:text="Add"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#2487c8"
+                android:layout_margin="@dimen/marginBasex2"
+                android:textSize="@dimen/textLarge"
+                local:MvxBind="Click AddSpotCommand" />
+        </FrameLayout>-->
+    </LinearLayout>
+</LinearLayout>

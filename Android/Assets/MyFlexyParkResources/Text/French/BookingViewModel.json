@@ -1,0 +1,19 @@
+﻿{
+   "PageTitle":  "Réservation",
+   "BackTitle" : "Retour",
+   "BeforeRemovingThisFormText" :  "Avant d’annuler cette requête",
+   "CostText" :  "Coût:",
+   "ToWaitText" : "attendre",
+   "DurationText" : "Durée :",
+   "HoursText" :  "heures",
+   "HourText" :  "heure",
+   "EndOfReservationText" :  "Fin de réservation:",
+   "VehicleText" :  "Véhicule:",
+   "PayWithCreditCardText" : "Payer avec carte de crédit",
+   "PayNowText" :  "Payer",
+   "RemainingCreditsText":  "Solde crédits:",
+   "BuyCreditsText":  "Acheter crédits",
+   "TimeOutText":"Délai dépassé !",
+   "PleaseSearchANewSpotText":"Le parking a été libéré. Merci de relancer la recherche",
+
+}

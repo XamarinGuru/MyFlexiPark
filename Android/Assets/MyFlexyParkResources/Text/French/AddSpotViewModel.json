@@ -1,0 +1,17 @@
+﻿{
+	"PageTitle":  "Ajouter un parking",
+	"EditPageTitle": "Actualiser un parking",
+	"BackTitle" : "Retour",
+	"AddText" :  "Ajouter",
+	"EditText": "Actualiser",
+	
+	"PleaseGoToText": "Placez-vous sur votre parking",
+	"GPSText": "GPS",
+	"AccuracyText": "Précision",
+	"PleaseSetAddressText": "Introduisez l’adresse du parking",
+	"PleaseSetSizeText": "Précisez la taille du parking",
+	"PleaseSetCostText": "Précisez le prix du parking",
+	"PleaseSetCalendarText": "Précisez l’indisponibilité du parking",
+	"ActivationText" : "Activation - Déactivation",
+	"HasNotBeenDoneText": "n'a pas été réalisé!",
+}

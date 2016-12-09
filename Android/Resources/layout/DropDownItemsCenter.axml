@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextRegular xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/marginBasex2"
+    android:gravity="center"
+    android:textSize="@dimen/textMediumLarge"
+    android:textColor="#000000"
+    local:MvxBind="Text" />

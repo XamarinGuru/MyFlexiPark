@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TouchableWrapper
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/marginBasex20"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            local:MvxBind="Visible IsNavigating">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:paddingTop="@dimen/marginBasex2"
+            android:paddingBottom="@dimen/marginBasex2"
+            android:background="@drawable/bg_cornor"
+            local:MvxBind="Visible HasStaredNavigation, Converter = InverterBool">
+            <TextNeueBold
+                android:layout_weight="1"
+                android:text="30 minutes"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textMediumLarge"
+                android:textColor="#ffffff"
+                local:MvxBind="Text ExpectedTime, Converter=ExpectedTimeConverter" />
+            <TextNeueBold
+                android:layout_weight="1"
+                android:text="30 km"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textMediumLarge"
+                android:textColor="#ffffff"
+                local:MvxBind="Text TotalDistance, Converter=DistanceConverter" />
+        <!--<TextNeueBold
+                android:layout_weight="1"
+                android:id="@+id/tvStart"
+                android:text="Start"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textMediumLarge"
+                android:textColor="#ffffff"
+                local:MvxBind="Click StartNavigateCommand" />-->
+        </LinearLayout>
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:background="@drawable/bg_recenter_cornor"
+        android:layout_marginLeft="@dimen/marginBasex2"
+        android:layout_marginBottom="@dimen/marginBasex2"
+        android:orientation="horizontal"
+        local:MvxBind="Click ReCenterCommand; Visible IsShowReCenter">
+        <ImageView
+            android:layout_width="@dimen/marginBasex4"
+            android:layout_height="@dimen/marginBasex4"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/blue_arrow" />
+        <TextRegular
+            android:id="@+id/tvRecenter"
+            android:padding="@dimen/marginBase"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textMedium"
+            android:text="RE-CENTER" />
+    </LinearLayout>
+</FrameLayout>

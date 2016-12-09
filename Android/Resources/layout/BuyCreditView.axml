@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="@color/bg"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#2487c8">
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:layout_centerVertical="true"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind=" Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+        <TextViewWithFont
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:text="Buy credits"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Font 'helvetica-neue-bold.ttf'; Text TextSource, Converter = Language, ConverterParameter = PageTitle" />
+    <!--RelativeLayout Virtual / Visibility = Invisible-->
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind=" Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+    <!--<LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginBasex4"
+            android:layout_marginLeft="@dimen/marginBasex4"
+            android:orientation="vertical">
+            <TextRegular
+                android:id="@+id/tv10"
+                android:paddingTop="@dimen/marginBasex2"
+                android:paddingBottom="@dimen/marginBasex2"
+                android:text="Buy 10 credits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text '10', Converter = BuyCreditItemConverter" />
+            <TextRegular
+                android:id="@+id/tv25"
+                android:paddingTop="@dimen/marginBasex2"
+                android:paddingBottom="@dimen/marginBasex2"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:text="Buy 25 credits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text '25', Converter = BuyCreditItemConverter" />
+            <TextRegular
+                android:id="@+id/tv50"
+                android:paddingTop="@dimen/marginBasex2"
+                android:paddingBottom="@dimen/marginBasex2"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:text="Buy 50 credits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text '50', Converter = BuyCreditItemConverter" />
+            <TextRegular
+                android:id="@+id/tv100"
+                android:paddingTop="@dimen/marginBasex2"
+                android:paddingBottom="@dimen/marginBasex2"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:text="Buy 100 credits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="@color/text"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text '100', Converter = BuyCreditItemConverter" />
+        </LinearLayout>-->
+    </ScrollView>
+</LinearLayout>

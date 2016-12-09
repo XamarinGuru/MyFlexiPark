@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#2487c8"
+        android:id="@+id/linearLayout1">
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = 'BackTitle'"
+                android:id="@+id/textNeueBold1" />
+        </RelativeLayout>
+        <TextViewWithFont
+            android:text="Add a spot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Font 'helvetica-neue-bold.ttf';Text TextSource, Converter = Language, ConverterParameter = 'PageTitle'"
+            android:id="@+id/textViewWithFont1" />
+        <RelativeLayout
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand"
+            android:id="@+id/relativeLayout1">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BackTitle"
+                android:id="@+id/textNeueBold2" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextRegular
+                android:id="@+id/tvSignUp"
+                android:text="Create a new account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="@dimen/textMediumLarge"
+                android:textColor="#2487c8"
+                android:layout_marginTop="@dimen/marginBasex6"
+                local:MvxBind="Click GotoSignUpCommand; Text TextSource, Converter = Language, ConverterParameter = CreateAccountText" />
+            <TextRegular
+                android:text="Or"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginBasex5"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = OrText" />
+            <TextRegular
+                android:text="Email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textSize="@dimen/textMediumLarge"
+                android:textColor="#ffffff"
+                android:layout_marginTop="@dimen/marginBasex10"
+                android:layout_marginLeft="@dimen/marginBasex4"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = EmailText" />
+            <EditTextRegular
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:id="@+id/etEmail"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_marginLeft="@dimen/marginBasex6"
+                android:layout_marginRight="@dimen/marginBasex6"
+                android:background="@drawable/bg_edittext"
+                android:padding="@dimen/marginBasex2"
+                android:layout_marginTop="@dimen/marginBasex2"
+                local:MvxBind="Text Email" />
+            <TextRegular
+                android:text="Password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_marginLeft="@dimen/marginBasex4"
+                android:layout_marginTop="@dimen/marginBasex2"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = PasswordText" />
+            <EditTextRegular
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPassword"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_marginLeft="@dimen/marginBasex6"
+                android:layout_marginRight="@dimen/marginBasex6"
+                android:background="@drawable/bg_edittext"
+                android:padding="@dimen/marginBasex2"
+                android:layout_marginTop="@dimen/marginBasex2"
+                local:MvxBind="Text Password" />
+            <TextRegular
+                android:id="@+id/tvSigin"
+                android:text="Sign in"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2487c8"
+                android:layout_marginTop="@dimen/marginBasex4"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/marginBasex6"
+                android:textSize="@dimen/textLarge"
+                local:MvxBind="Click SignInCommand; Text TextSource, Converter = Language, ConverterParameter = SignInText" />
+            <TextRegular
+                android:id="@+id/tvForgotPassword"
+                android:text="I forgot my password"
+                android:gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#2487c8"
+                android:layout_marginTop="@dimen/marginBasex4"
+                android:layout_marginBottom="@dimen/marginBasex4"
+                android:layout_marginRight="@dimen/marginBasex6"
+                android:layout_marginLeft="@dimen/marginBasex6"
+                android:textSize="@dimen/textLarge"
+                local:MvxBind="Click LostPasswordCommand; Text TextSource, Converter = Language, ConverterParameter = ForgotPasswordText" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,15 @@
+﻿{
+	"PageTitle": "Add Spot",
+	"EditPageTitle": "Edit Spot",
+	"BackTitle" : "Back",
+	"AddText" : "Add",
+	"EditText" : "Save",
+	"PleaseGoToText": "Please go to your spot",
+	"GPSText": "GPS",
+	"AccuracyText": "Accuracy",
+	"PleaseSetAddressText": "Please set the spot address",
+	"PleaseSetSizeText": "Please set the spot size",
+	"PleaseSetCostText": "Please set the spot cost",
+	"PleaseSetCalendarText": "Please set the spot calendar",
+	"HasNotBeenDoneText": "has not been done !",
+}

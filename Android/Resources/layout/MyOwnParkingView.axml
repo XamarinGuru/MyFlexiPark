@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#2487c8">
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back 69"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+        <TextNeueBold
+            android:id="@+id/tvfTitle"
+            android:text="Owner Spots x69"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = PageTitle" />
+        <TextNeueBold
+            android:id="@+id/tvedit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:text="Delete"
+            android:textColor="#ffffff"
+            android:layout_alignParentRight="true"
+            android:visibility="invisible"
+            android:textSize="@dimen/textMediumLarge"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/marginBasex2"
+            local:MvxBind="Click SwitchModeCommand; Text TextSource, Converter = Language, ConverterParameter = DeleteText" />
+    </LinearLayout>
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <MvxListView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            local:MvxItemTemplate="@layout/itemmyownparkingview"
+            android:paddingTop="@dimen/marginBasex2"
+            android:dividerHeight="2dp"
+            android:background="@color/bg"
+            android:listSelector="@android:color/transparent"
+            android:divider="@android:color/transparent"
+            local:MvxBind="ItemsSource Parkings; ItemClick OwnParkingItemSelectedCommand" />
+        <ImageView
+            android:id="@+id/ivAdd"
+            android:layout_width="@dimen/marginBasex10"
+            android:layout_height="@dimen/marginBasex10"
+            android:src="@drawable/blue_icon_add"
+            android:layout_gravity="bottom|right"
+            android:layout_marginRight="@dimen/marginBasex4"
+            android:layout_marginBottom="@dimen/marginBasex4"
+            local:MvxBind="Click GotoAddSpotCommand" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="@color/bg"
+    android:layout_height="fill_parent">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextRegular
+                    android:text="Bank account to be credited:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_marginLeft="@dimen/marginBasex3"
+                    android:layout_marginTop="@dimen/marginBasex3"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BankAccountToBeCreditedText" />
+                <EditTextRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText1"
+                    android:layout_marginLeft="@dimen/marginBasex6"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:singleLine="true"
+                    android:layout_marginRight="@dimen/marginBasex6"
+                    style="@android:style/Widget.DeviceDefault.EditText"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2" />
+                <TextRegular
+                    android:text="Account holder name:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_marginLeft="@dimen/marginBasex3"
+                    android:layout_marginTop="@dimen/marginBasex3"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = AccountHolderNameText" />
+                <EditTextRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText1"
+                    android:layout_marginLeft="@dimen/marginBasex6"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:singleLine="true"
+                    android:layout_marginRight="@dimen/marginBasex6"
+                    style="@android:style/Widget.DeviceDefault.EditText"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2" />
+                <TextRegular
+                    android:text="Domicile address:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_marginLeft="@dimen/marginBasex3"
+                    android:layout_marginTop="@dimen/marginBasex3"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = DomicileAddressText" />
+                <EditTextRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/editText1"
+                    android:layout_marginLeft="@dimen/marginBasex6"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_marginRight="@dimen/marginBasex6"
+                    android:singleLine="true"
+                    style="@android:style/Widget.DeviceDefault.EditText"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2" />
+            </LinearLayout>
+            <TextRegular
+                android:id="@+id/tvAddASpot"
+                android:text="Add a spot"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#2487c8"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginBasex5"
+                android:layout_marginBottom="@dimen/marginBasex2"
+                android:textSize="@dimen/textLarge"
+                android:layout_marginLeft="@dimen/marginBase"
+                local:MvxBind="Click GotoAddSpotCommand; Text TextSource, Converter = Language, ConverterParameter = AddASpotText" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

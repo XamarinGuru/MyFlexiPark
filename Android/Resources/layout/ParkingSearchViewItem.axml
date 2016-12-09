@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="@dimen/marginBasex2"
+    android:layout_width="match_parent"
+    android:background="@drawable/listselector"
+    android:layout_height="wrap_content">
+    <TextRegular
+        android:text="51 Hoang Viet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/textMediumLarge"
+        local:MvxBind="Text Result[0].BindingStreet" />
+    <TextRegular
+        android:layout_marginLeft="@dimen/marginBasex2"
+        android:text="Thanh Pho Ho Chi Minh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:textSize="@dimen/textMedium"
+        local:MvxBind="Text Result[0].BindingCity" />
+</LinearLayout>

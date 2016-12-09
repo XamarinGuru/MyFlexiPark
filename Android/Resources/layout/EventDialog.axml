@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:background="#2487c8">
+            <TextNeueBold
+                android:text="8/28/2015"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text SelectedDate, Converter =  DateTimeToStringConverter, ConverterParameter = 'Date'" />
+        <!--local:MvxBind="Font 'helvetica-neue-bold.ttf'"-->
+            <TextNeueBold
+                android:id="@+id/tvEdit"
+                android:text="Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/marginBasex2"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Click SwitchModeCommand" />
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/marginBasex2"
+            android:paddingBottom="@dimen/marginBasex2">
+            <MvxListView
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:dividerHeight="2dp"
+                android:divider="@android:color/transparent"
+                local:MvxItemTemplate="@layout/itemevent"
+                local:MvxBind="ItemsSource Events; ItemClick EventItemClickCommand" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

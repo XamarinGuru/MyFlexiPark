@@ -1,0 +1,15 @@
+﻿{
+	"PageTitle": "",
+	"BackTitle" : "Back",
+	"OfferMinutesText" :  "5 minutes offertes pour rejoindre le parking",
+	"AddressText" : "Address",
+	"CostText" : "Cost",
+	"StartTimeText" : "Start time",
+	"EndTimeText" : "End time",
+	"VehicleText" : "Vehicle",
+	"NavigateText" : "Navigate",
+	"LeaveText" : "Leave",
+	"ReportText" : "Report",
+	"LeaveThisParkingText" : "Are you sure you want to leave this parking ?",
+	"ReportThisParkingText" : "Are you sure you want to report this parking?"
+}

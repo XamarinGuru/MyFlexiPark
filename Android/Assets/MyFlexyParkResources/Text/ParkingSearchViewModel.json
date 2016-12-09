@@ -1,0 +1,13 @@
+﻿{
+	"PageTitle": "Search",
+	"BackTitle" : "Back",
+	"BookForText" : "Book for:",
+	"SearchingForText" : "Searching for:",
+	"StartDateText" : "Start Date:",
+	"StartHourText" : "Start Hour:",
+	"EndDateText" : "End Date:",
+	"EndHourText" : "End Hour:",
+	"LocationText" : "Location",
+	"SearchText" : "Check",
+	"StreetText" : "Street"
+}

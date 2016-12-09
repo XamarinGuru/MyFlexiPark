@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg"
+    android:splitMotionEvents="true"
+    android:weightSum="1">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:minWidth="25px"
+            android:minHeight="25px"
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1">
+            <TextRegular
+                android:text="Credit card number:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_marginLeft="@dimen/marginBasex3"
+                android:layout_marginTop="@dimen/marginBasex3"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = CreditCardNumberText" />
+            <EditTextRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText1"
+                android:layout_marginLeft="@dimen/marginBasex6"
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:layout_marginRight="@dimen/marginBasex6"
+                android:singleLine="true"
+                style="@android:style/Widget.DeviceDefault.EditText"
+                android:background="@drawable/bg_edittext"
+                android:padding="@dimen/marginBasex2"
+                local:MvxBind="Text Number" />
+            <TextRegular
+                android:text="Credit card holder name:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_marginLeft="@dimen/marginBasex3"
+                android:layout_marginTop="@dimen/marginBasex3"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = CreditCardHolderNameText" />
+            <EditTextRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText1"
+                android:layout_marginLeft="@dimen/marginBasex6"
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:singleLine="true"
+                android:layout_marginRight="@dimen/marginBasex6"
+                style="@android:style/Widget.DeviceDefault.EditText"
+                android:background="@drawable/bg_edittext"
+                android:padding="@dimen/marginBasex2"
+                local:MvxBind="Text HolderName" />
+            <TextRegular
+                android:text="Credit card cryptogram:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_marginLeft="@dimen/marginBasex3"
+                android:layout_marginTop="@dimen/marginBasex3"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = CreditCardCryptogramText" />
+            <EditTextRegular
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/editText1"
+                android:layout_marginLeft="@dimen/marginBasex6"
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:singleLine="true"
+                android:layout_marginRight="@dimen/marginBasex6"
+                style="@android:style/Widget.DeviceDefault.EditText"
+                android:background="@drawable/bg_edittext"
+                android:padding="@dimen/marginBasex2"
+                local:MvxBind="Text Cryptogram" />
+            <TextRegular
+                android:text="Validity:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_marginLeft="@dimen/marginBasex3"
+                android:layout_marginTop="@dimen/marginBasex3"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = ValidityText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/relativeLayout1"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:layout_marginLeft="@dimen/marginBasex6"
+                android:layout_marginRight="@dimen/marginBasex6">
+                <TextRegular
+                    android:id="@+id/tvValidity"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_marginRight="@dimen/marginBasex2"
+                    local:MvxBind="Text ValidityTime, Converter = ValidityTimeConverter"
+                    android:layout_weight="0.1" />
+                <TextRegular
+                    android:id="@+id/tvPick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="@color/text"
+                    android:text="Pick"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = PickText" />
+            </LinearLayout>
+            <TextRegular
+                android:id="@+id/tvVehicleManagement"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="@dimen/marginBasex4"
+                android:layout_marginTop="@dimen/marginBasex4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textMediumLarge"
+                android:textColor="@color/text"
+                android:text="Vehicle Management"
+                local:MvxBind="Click GotoChooseVehicleCommand; Text TextSource, Converter = Language, ConverterParameter = VehicleManagementText" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

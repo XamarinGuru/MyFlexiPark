@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/marginBase"
+    android:paddingTop="@dimen/marginBase"
+    android:background="@drawable/listselector"
+    android:gravity="center_vertical"
+    android:paddingLeft="@dimen/marginBasex2"
+    android:paddingRight="@dimen/marginBasex2"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_marginRight="@dimen/marginBase"
+            android:layout_width="@dimen/marginBasex3"
+            android:layout_height="@dimen/marginBasex3"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="@dimen/marginBasex3"
+                android:layout_height="@dimen/marginBasex3"
+                android:background="@drawable/green_icon_clock"
+                local:MvxBind="Visible IsShowClock" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
+            <TextRegular
+                android:layout_alignParentBottom="true"
+                android:id="@+id/tvDistance"
+                android:text="100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2487c8"
+                android:singleLine="true"
+                android:textSize="@dimen/textBigger"
+                local:MvxBind="Text ParkingSpot.Distance, Converter = RoundedDistanceConverter" />
+        <!--<TextRegular
+                android:layout_alignParentBottom="true"
+                android:paddingLeft="@dimen/marginBasex2"
+                android:layout_toRightOf="@+id/tvDistance"
+                android:text="m"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2487c8"
+                android:textSize="@dimen/textExtraLarge" />-->
+        </RelativeLayout>
+    </LinearLayout>
+    <TextViewWithFont
+        android:text="6€ "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/textBigger"
+        local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'; Text ParkingSpot.Cost, Converter = Money" />
+    <TextViewWithFont
+        android:text="Name"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:gravity="right|center_vertical"
+        android:layout_gravity="center_vertical"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:textColor="#72bd25"
+        android:textSize="@dimen/textMediumLarge"
+        local:MvxBind="Font 'HelveticaNeue.ttf'; Text ParkingSpot.Provider" />
+</LinearLayout>

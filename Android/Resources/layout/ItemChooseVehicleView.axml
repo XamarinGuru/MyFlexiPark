@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/marginBasex4"
+    android:paddingBottom="@dimen/marginBasex4"
+    android:paddingLeft="@dimen/marginBasex4"
+    android:paddingRight="@dimen/marginBasex4"
+    android:background="@drawable/listselector"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TextRegular
+        android:text="xx-XXXX-xx-XXXX"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:singleLine="true"
+        android:textSize="@dimen/textMediumLarge"
+        android:gravity="center_vertical"
+        android:layout_gravity="left"
+        android:textColor="#ffffff"
+        local:MvxBind="Text Vehicle.PlateNumber" />
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical|right">
+        <TextRegular
+            android:text="Vehicle Type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_weight="1"
+            android:textSize="@dimen/textMediumLarge"
+            android:layout_marginRight="@dimen/marginBasex2"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            local:MvxBind="Text Vehicle.Type" />
+        <FrameLayout
+            android:layout_width="@dimen/marginBasex5"
+            android:layout_height="@dimen/marginBasex5"
+            android:layout_marginLeft="@dimen/marginBasex3"
+            local:MvxBind="Visible IsEditMode">
+            <MagicImageView
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:src="@drawable/white_icon_edit_64"
+                local:MvxBind="Click GotoEditVehicleCommand" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_marginLeft="@dimen/marginBasex3"
+            android:layout_width="@dimen/marginBasex5"
+            android:layout_height="@dimen/marginBasex5"
+            local:MvxBind="Visible IsEditMode">
+            <MagicImageView
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:src="@drawable/white_icon_delete"
+                local:MvxBind="Click DeleteVehicleCommand" />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

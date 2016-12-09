@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <FrameLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="?android:attr/actionBarSize"
+      android:background="#2487c8">
+    <RelativeLayout
+        android:id="@+id/rlBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        local:MvxBind="Click BackCommand">
+      <ImageView
+          android:id="@+id/ivBack"
+          android:layout_width="@dimen/marginBasex5"
+          android:layout_height="@dimen/marginBasex5"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="@dimen/marginBasex2"
+          android:background="@drawable/white_icon_back" />
+      <TextNeueBold
+          android:text="Back"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/ivBack"
+          android:layout_centerVertical="true"
+          android:textColor="#ffffffff"
+          android:textSize="@dimen/textMediumLarge"
+          local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+    </RelativeLayout>
+    <TextViewWithFont
+        android:text="Choose Vehicle"
+        android:layout_width="wrap_content"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/textMediumLarge"
+        local:MvxBind="Font 'helvetica-neue-bold.ttf'; Text TextSource, Converter = Language, ConverterParameter = PageTitle" />
+    <LinearLayout
+       android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_gravity="right|center_vertical"
+       local:MvxBind="Visible IsEditMode, Converter = InverterBool">
+      <TextNeueBold
+          android:id="@+id/tvEdit"
+          android:text="Edit"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="right|center_vertical"
+          android:layout_alignParentRight="true"
+          android:layout_centerVertical="true"
+          android:layout_marginRight="@dimen/marginBasex2"
+          android:textColor="#ffffffff"
+          android:textSize="@dimen/textMediumLarge"
+          local:MvxBind="Click SwitchModeCommand; Text TextSource, Converter = Language, ConverterParameter = EditTitle" />
+    </LinearLayout>
+  </FrameLayout>
+  <FrameLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+    <MvxListView
+        android:layout_marginTop="@dimen/marginBasex2"
+        android:layout_marginBottom="@dimen/marginBasex2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="2dp"
+        local:MvxItemTemplate="@layout/itemchoosevehicleview"
+        local:MvxBind="ItemsSource Vehicles; ItemClick VehicleItemClickCommand" />
+    <ImageView
+        android:id="@+id/ivAdd"
+         android:layout_width="@dimen/marginBasex10"
+            android:layout_height="@dimen/marginBasex10"
+        android:layout_marginRight="@dimen/marginBasex4"
+        android:layout_marginBottom="@dimen/marginBasex4"
+        android:layout_gravity="bottom|right"
+        android:src="@drawable/blue_icon_add"
+        local:MvxBind="Click GotoAddVehicleCommand" />
+  </FrameLayout>
+</LinearLayout>

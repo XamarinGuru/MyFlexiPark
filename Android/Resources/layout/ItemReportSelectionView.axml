@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/marginBasex4"
+    android:paddingBottom="@dimen/marginBasex4"
+    android:paddingLeft="@dimen/marginBasex4"
+    android:paddingRight="@dimen/marginBasex4"
+    android:background="@drawable/listselector"
+    android:gravity="center"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TextRegular
+        android:text="Vehicle Type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/textMediumLarge"
+        android:textColor="#ffffff"
+        local:MvxBind="Text " />
+</LinearLayout>

@@ -1,0 +1,34 @@
+﻿{
+	"PageTitle": "Report",
+	"BackTitle" : "Back",
+	"ReportAProblemText" : "Report a problem",
+	"ReportText" : "Report",
+	"PlateNumberText" : "Blocking car plate number (*)",
+	"ProblemText" : "Problem description (*)",
+	"TakeAPictureText" : "Take a picture",
+	"OKText": "OK",
+	"ExitText" : "Exit",
+	"ExtensionText" : "Extension",
+	"AlreadyTakenText" : "The spot is already taken",
+	"CarOnTheStreetText" : "There is a car on the street in front of the spot",
+	"NoMarkText" : "There is no mark on the garage door",
+	"NoSpotText" : "There is no spot",
+	"ParkingFullText" : "The parking is full",
+	"RefuseTheSpotText" : "I refuse the spot",
+	"CanNotLeaveText" : "I can't leave the spot",
+	"LeaveAndReportProblemText" : "I leave and report a problem",
+	
+	"PleaseChooseOptionText":"Please choose an option",
+	"CancelText":"Cancel",
+	"TakeAPictureText":"Take a picture",
+	"SelectFromLibraryText":"Select from library",
+
+	"PleaseFillPlateNumberText" : "Please fill the plate number field",
+	"PleaseFillProblemText": "Please fill the problem description field",
+	"NewParkingSpotText": "New parking spots will be displayed",
+	"YouWillBeRefundText": "You will be refunded. Please valid to release this parking spot and to display other parking spots",
+	"PleaseContactText" : "Please contact the company for refund:info@myflexypark.be",
+	"CallOwnerText":"Call Owner",
+
+
+}

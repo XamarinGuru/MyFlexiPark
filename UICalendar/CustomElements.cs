@@ -1,0 +1,307 @@
+// 
+//  Copyright 2011  Clancey
+// 
+//    Licensed under the Apache License, Version 2.0 (the "License");
+//    you may not use this file except in compliance with the License.
+//    You may obtain a copy of the License at
+// 
+//        http://www.apache.org/licenses/LICENSE-2.0
+// 
+//    Unless required by applicable law or agreed to in writing, software
+//    distributed under the License is distributed on an "AS IS" BASIS,
+//    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+//    See the License for the specific language governing permissions and
+//    limitations under the License.
+using System;
+using CoreGraphics;
+using System.Collections.Generic;
+using UIKit;
+using Foundation;
+using CoreGraphics;
+using MonoTouch.Dialog;
+using EventKit;
+using EventKitUI;
+using System.Linq;
+using ObjCRuntime;
+using MonoTouch.Dialog.Utilities;
+
+namespace UICalendar
+{
+	
+    public class MonthEventElement : Element
+    {
+        public CalendarDayEventView TheEvent;
+
+        public static float margin = 5f;
+        public static float circleWidth = 25;
+        public static float timeWidth = 62f;
+        public static float subTimeWidth = 25f;
+
+        static NSString key = new NSString("MonthEventElement");
+        static UIFont font = UIFont.BoldSystemFontOfSize(17f);
+        static UIFont timeFont = UIFont.BoldSystemFontOfSize(14f);
+        static UIFont timeSubFont = UIFont.SystemFontOfSize(14f);
+        static UIFont subFont = UIFont.SystemFontOfSize(12);
+        public EventClicked OnEventClicked;
+        public EditEventClicked OnEditEventClicked;
+        public DeleteEventClicked OnDeleteEventClicked;
+
+        public virtual UIColor backColor
+        {
+            get { return UIColor.Clear; }
+        }
+
+        public MonthEventElement(CalendarDayEventView theEvent)
+            : base("")
+        {
+            TheEvent = theEvent;
+        }
+
+        public override UITableViewCell GetCell(UITableView tv)
+        {
+            var cell = tv.DequeueReusableCell(key) as MonthEventCellView;
+            if (cell == null)
+                cell = new MonthEventCellView(this);
+            else
+                cell.UpdateFrom(this);
+            cell.SelectionStyle = UITableViewCellSelectionStyle.None;
+
+            cell.btnDelete.Hidden = TheEvent._Booking != null;
+            //cell.btnEdit.Hidden = TheEvent._Booking != null;
+
+            cell.btnDelete.TouchUpInside += (sender, e) =>
+            {
+                if (OnDeleteEventClicked != null)
+                    OnDeleteEventClicked(TheEvent);
+            };
+            
+//            cell.btnEdit.TouchUpInside += (sender, e) => 
+//                {
+//                    if(OnEditEventClicked != null)
+//                        OnEditEventClicked(TheEvent);
+//                };
+            return cell;
+			
+        }
+
+        public override void Selected(DialogViewController dvc, UITableView tableView, NSIndexPath path)
+        {
+            if (OnEventClicked != null)
+                OnEventClicked(TheEvent);
+        }
+
+        public class MonthEventCellView : UITableViewCell
+        {
+            MonthEventElement parent;
+            UIView circleView;
+            UILabel timeLabel;
+            UILabel timeSubLabel;
+            UILabel label;
+            UILabel lblSub;
+            public UIButton btnDelete;
+            //public UIButton btnEdit;
+            bool timeHasSubLabel;
+
+            public MonthEventCellView(MonthEventElement parent)
+                : base(UITableViewCellStyle.Value1, key)
+            {
+                this.parent = parent;
+				
+                circleView = new Circle { Color = parent.TheEvent.color, BackgroundColor = UIColor.Clear };
+                setupTimeLabels();
+				
+                BackgroundColor = UIColor.Clear;
+                label = new UILabel { TextAlignment = UITextAlignment.Left, Text = parent.TheEvent.Title, Font = font, TextColor = parent.TheEvent.IsBooking ? UIColor.Red : UIColor.Gray, Lines = 1, LineBreakMode = UILineBreakMode.TailTruncation, BackgroundColor = UIColor.Clear };
+                lblSub = new UILabel { TextAlignment = UITextAlignment.Left, Text = parent.TheEvent.location, Font = subFont, TextColor = UIColor.Gray, BackgroundColor = UIColor.Clear };
+                btnDelete = new UIButton(UIButtonType.Custom);
+                btnDelete.SetTitleColor(UIColor.Black, UIControlState.Normal);
+                btnDelete.SetBackgroundImage(UIImage.FromFile("Images/black_icon_delete.png"), UIControlState.Normal);
+
+				
+                //btnEdit = new UIButton (UIButtonType.Custom);
+                //btnEdit.SetTitleColor(UIColor.Black, UIControlState.Normal);
+                //btnEdit.SetBackgroundImage(UIImage.FromFile("Images/black_icon_edit_64.png"), UIControlState.Normal);
+
+
+                ContentView.Add(circleView);
+                ContentView.Add(timeSubLabel);
+                ContentView.Add(timeLabel);
+                ContentView.Add(label);
+                ContentView.Add(lblSub);
+                ContentView.Add(btnDelete);
+                //ContentView.Add(btnEdit);
+            }
+
+            public override void Draw(CGRect rect)
+            {
+                base.Draw(rect);
+            }
+
+            public void setupTimeLabels ()
+            {
+                timeLabel = new UILabel { Font = MonthEventElement.timeFont, TextAlignment = UITextAlignment.Right, BackgroundColor = UIColor.Clear };
+                timeSubLabel = new UILabel { Font = MonthEventElement.timeSubFont, TextAlignment = UITextAlignment.Center, TextColor = UIColor.Gray, BackgroundColor = UIColor.Clear };
+
+                if (parent.TheEvent.AllDay) {
+                    timeLabel.Text = "all-day";
+                    return;
+                }
+                var time = parent.TheEvent.startDate.ToShortTimeString ();
+                if (time == "12:00 PM") {
+                    timeLabel.Text = "NOON";
+                    return;
+                }
+
+
+                timeHasSubLabel = true;
+                var timeParts = time.Split (char.Parse (" "));
+                var timeOnly = timeParts [0];
+                var timeOnlyParts = timeOnly.Split (char.Parse (":"));
+
+                timeLabel.Text = timeOnlyParts [1] == "00" ? timeOnlyParts [0] : timeOnly;
+                if (timeParts.Count () >= 2)
+                    timeSubLabel.Text = timeParts [1];
+                else if (timeParts.Count () == 1)
+                    timeSubLabel.Text = timeParts [0];
+                else
+                    timeSubLabel.Text = string.Empty;
+            }
+
+            public void Refresh()
+            {
+                label.Text = parent.TheEvent.Title;
+                lblSub.Text = parent.TheEvent.location;
+                circleView.BackgroundColor = parent.TheEvent.color;
+                setupTimeLabels();
+            }
+
+            public override void LayoutSubviews()
+            {
+                base.LayoutSubviews();
+                var full = ContentView.Bounds;
+                var frame = full;
+                frame.Height -= margin * 2;
+                frame.X = margin;
+                frame.Width = circleWidth;
+                circleView.Frame = frame;
+				
+                frame.X += circleWidth;
+                frame.Height = 24f;
+                frame.Y = (full.Height - frame.Height) / 2;
+                if (!timeHasSubLabel)
+                {
+                    frame.Width = timeWidth;
+                    timeLabel.Frame = frame;
+                    frame.X += timeWidth;
+                }
+                else
+                {
+                    frame.Width = timeWidth - subTimeWidth;
+                    var timeFrame = frame;
+                    timeLabel.Frame = timeFrame;
+					
+                    frame.X += frame.Width;
+                    frame.Width = subTimeWidth;
+                    var subTimeFrame = frame;
+                    timeSubLabel.Frame = subTimeFrame;
+                    frame.X += subTimeWidth;
+                }
+				
+                frame.X += margin * 2;
+                frame.Height = 27f;
+                frame.Y = (full.Height - frame.Height) / 2;
+                frame.Width = full.Width - frame.X;
+                if (string.IsNullOrEmpty(lblSub.Text))
+                {
+                    frame.Width = full.Width - frame.X;
+                    label.Frame = frame;
+                }
+                else
+                {
+                    var mid = full.Height / 2;
+                    var labelTop = mid - frame.Height + 8;
+                    frame.Y = labelTop;
+                    label.Frame = frame;
+					
+                    frame.Y = mid - 4;
+                    lblSub.Frame = frame;
+                }
+
+                var rect = lblSub.Frame;
+                rect.X = full.Width - 50;
+                rect.Y = full.Height / 2 - 15;
+                rect.Width = 30;
+                rect.Height = 30;
+                btnDelete.Frame = rect;
+
+                rect.X = rect.X - 50;
+                //btnEdit.Frame = rect;
+            }
+
+            public void UpdateFrom(MonthEventElement newParent)
+            {
+                parent = newParent;
+                Refresh();
+            }
+        }
+
+        private class Circle : UIView
+        {
+            const float diameter = 15;
+
+            public UIColor Color { get; set; }
+
+            public override void Draw(CGRect rect)
+            {
+                var context = UIGraphics.GetCurrentContext();
+				
+                context.SaveState();
+                var frame = rect;
+                frame.X = (frame.Width - diameter) / 2;
+                frame.Y = frame.Height / 2;
+                frame.Height = diameter;
+                frame.Width = diameter;
+				
+                //context.SetFillColorWithColor(UIColor.Black.ColorWithAlpha(.7f).CGColor);
+                //context.FillEllipseInRect(frame);
+				
+                frame.Y -= 3;
+                context.SetFillColor(UIColor.White.CGColor);
+                context.FillRect(rect);
+                context.SetFillColor(Color.CGColor);
+                context.FillEllipseInRect(frame);
+				
+                context.RestoreState();
+				
+                //
+                var shineFrame = frame;
+                shineFrame.Height = (shineFrame.Height / 2);
+				
+                // the colors
+                var topColor = UIColor.White.ColorWithAlpha(0.5f).CGColor;
+                var bottomColor = UIColor.White.ColorWithAlpha(0.10f).CGColor;
+                List<nfloat> colors = new List<nfloat>();
+                colors.AddRange(topColor.Components);
+                colors.AddRange(bottomColor.Components);
+                nfloat[] locations = new nfloat[] { 0, 1 };
+				
+                CGGradient gradient = new CGGradient(topColor.ColorSpace, colors.ToArray(), locations);
+				
+                context.SaveState();
+                context.SetShouldAntialias(true);
+                context.AddEllipseInRect(shineFrame);
+                context.Clip();
+				
+                var startPoint = new CGPoint(shineFrame.GetMidX(), shineFrame.GetMidY());
+                var endPoint = new CGPoint(shineFrame.GetMidX(), shineFrame.GetMaxY());
+				
+                context.DrawLinearGradient(gradient, startPoint, endPoint, CGGradientDrawingOptions.DrawsBeforeStartLocation);
+                gradient.Dispose();
+                context.RestoreState();
+				
+            }
+        }
+    }
+
+}
+

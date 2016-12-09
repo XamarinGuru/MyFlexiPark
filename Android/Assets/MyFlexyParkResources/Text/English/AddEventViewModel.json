@@ -1,0 +1,8 @@
+﻿{
+	"PageTitle": "Add event",
+	"BackTitle" : "Back",
+	"TitleText" : "Title:",
+	"StartDateText" : "Start Date:",
+	"EndDateText" : "End Date:",
+	"AddText" : "Add"
+}

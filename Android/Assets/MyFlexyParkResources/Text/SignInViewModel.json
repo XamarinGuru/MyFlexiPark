@@ -1,0 +1,10 @@
+﻿{
+	"PageTitle" : "My profile",
+	"BackTitle" : "Back",
+"EmailText":"Email",
+"PasswordText":"Password",
+	"CreateAccountText":"Create a new account",
+	"ForgotPasswordText" : "I forgot my password",
+	"OrText" : "Or",
+	"SignInText":"Sign In"
+}

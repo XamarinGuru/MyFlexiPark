@@ -1,0 +1,75 @@
+﻿{
+	"TurnOnInternetText": "Please turn on internet!",
+	"TurnOnGPSText": "Please turn on GPS!",
+	"WarningText": "Warning",
+	"YesText": "Yes",
+	"OKText": "OK",
+	"NoText": "No",
+	"CancelText": "Cancel",
+	"SettingText": "Setting",
+	"MessageTitle": "Message",
+	"GGPlayNotInstalledText": "Google Play Services is not installed",
+	"AcceptTermsText": "Please accept terms of use !",
+	"TimeOutText": "Out of time !",
+	"TenMinutesToLeavingText": "10 minutes before leaving",
+	"AlertText": "Alert",
+	"ExtendText": "Extend",
+	"SuccessText": "Success",
+	"ExtendSuccessfullyText": "Extend successfully !",
+	"BackTitle" :  "Back",
+	"MinuteText": "minute",
+	"MinutesText": "minutes",
+	"HourText": "hour",
+	"HoursText": "hours",
+	"SecondText": "second",
+	"SecondsText": "seconds",
+	"RecenterText": "RE-CENTER",
+	"CalculatingText": "Calculating",
+	"MetersText" : "meters",
+
+	"LeaveThisParkingText" : "Are you sure you want to release this parking ?",
+	"ReportThisParkingText" : "Are you sure you want to release this parking?",
+	"DeleteVehicleText" : "Are you sure you want to delete this vehicle?",
+	"DeleteEventText" : "Are you sure you want to delete this event?",
+
+	"EditEventText" : "Update Event",
+"AreYouSureEventText" : "Are you sure you want to update this event ?",
+"AreYouSureDeleteEventText" : "Are you sure you want to delete this event ?",
+"EditEventOnlyText" : "Update only this",
+"EditFutureEventsText" : "Update all future",
+
+"DeleteEventText" : "Delete Event",
+"AreYouSureDeleteEventText" : "Are you sure you want to delete this event ?",
+"DeleteEventOnlyText" : "Delete this event only",
+"DeleteFutureEventsText" : "Delete all future events",
+
+"CancelReservationText" : "Cancel reservation",
+"AreYouSureCancelReservationText" : "Are you sure you want to cancel this reservation ?",
+
+"ReportText" : "Report",
+"PleaseSelectText" : "Please select an option",
+
+"CanNotFindRoutesText": "Cannot find routes. Please try again !",
+
+	"ExitText" : "Exit",
+	"ExtensionText" : "Extension",
+	"AlreadyTakenText" : "The spot is already taken",
+	"CarOnTheStreetText" : "There is a car on the street in front of the spot",
+	"NoMarkText" : "There is no mark on the garage door",
+	"NoSpotText" : "There is no spot",
+	"ParkingFullText" : "The parking is full",
+	"RefuseTheSpotText" : "I refuse the spot",
+	"CanNotLeaveText" : "I can't leave the spot",
+	"LeaveAndReportProblemText" : "I leave and report a problem",
+
+
+	"YouMustLeaveText" : "You must leave the parking spot now or extend to avoid the owner to remove your car",
+   "AlreadyLeftText" : "I already left",
+   "ExtendText" : "Extend",
+
+   "PleaseLeaveOrExtendText" : "Please leave the parking spot soon or extend: the renting time is elapsed in 10 minutes",
+
+   "CancelText":"Cancel",
+   "ConfirmText":"Confirm"
+
+}

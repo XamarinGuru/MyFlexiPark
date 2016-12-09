@@ -1,0 +1,17 @@
+﻿{
+	"MinuteText": "minute",
+	"MinutesText": "minutes",
+	"HourText": "hour",
+	"HoursText": "hours",
+	"SecondText": "second",
+	"SecondsText": "Seconds",
+	"RecenterText": "RE-CENTER",
+	"CalculatingText": "Calculating",
+	
+	"PageTitle": "",
+	"BackTitle" : "Back",
+	"StartText" : "Start",
+	"OverviewText" : "Overview",
+	"ResumeText" : "Resume",
+	"SummaryText" : "Summary",
+}

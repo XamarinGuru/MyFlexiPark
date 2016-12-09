@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExtendParkingTimeView">
+            <connections>
+                <outlet property="tableExtendTime" destination="M5Z-ve-v51" id="OLw-hQ-m3t"/>
+                <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PHW-xr-pFM">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="kDi-aD-BFz"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="M5Z-ve-v51">
+                    <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <color key="separatorColor" red="0.08235294118" green="0.08235294118" blue="0.08235294118" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="0.082352941176470587" green="0.082352941176470587" blue="0.082352941176470587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="M5Z-ve-v51" secondAttribute="bottom" id="1xH-AF-h6U"/>
+                <constraint firstItem="PHW-xr-pFM" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Ckt-WX-xQd"/>
+                <constraint firstItem="M5Z-ve-v51" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MhT-HV-qfT"/>
+                <constraint firstAttribute="trailing" secondItem="PHW-xr-pFM" secondAttribute="trailing" id="Z7l-J7-J9E"/>
+                <constraint firstItem="M5Z-ve-v51" firstAttribute="top" secondItem="PHW-xr-pFM" secondAttribute="bottom" id="eGQ-tZ-k4q"/>
+                <constraint firstAttribute="trailing" secondItem="M5Z-ve-v51" secondAttribute="trailing" id="fBo-az-7MF"/>
+                <constraint firstItem="PHW-xr-pFM" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="n4p-Fy-ZwD"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

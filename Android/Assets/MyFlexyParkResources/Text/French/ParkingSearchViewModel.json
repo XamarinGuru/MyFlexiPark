@@ -1,0 +1,13 @@
+﻿{
+   "PageTitle":  "Rechercher",
+   "BackTitle" :  "Retour",
+   "BookForText" :  "Réserver pour:",
+   "SearchingForText" :  "Rechercher pour:",
+   "StartDateText" : "Date d’arrivée:",
+   "StartHourText" :  "Heure d’arrivée:",
+   "EndDateText" :  "Date de sortie:",
+   "EndHourText" :  "Heure de sortie:",
+   "LocationText" :  "Adresse:",
+   "SearchText" :  "Vérifier",
+   "StreetText" : "Rue"
+}

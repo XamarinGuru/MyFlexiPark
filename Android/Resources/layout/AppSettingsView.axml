@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/header">
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click SaveSettingsCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+        <TextViewWithFont
+            android:text="App Settings"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Font 'helvetica-neue-bold.ttf';Text TextSource, Converter = Language, ConverterParameter = PageTitle" />
+    <!--RelativeLayout Virtual / Visibility Invisible-->
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_gravity="center_vertical"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginBasex5"
+                android:orientation="horizontal">
+                <TextRegular
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/marginBasex4"
+                    android:text="App version:"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = AppVersionText" />
+                <TextRegular
+                    android:layout_weight="1"
+                    android:text="1.2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#ffffff"
+                    android:gravity="right"
+                    android:layout_marginRight="@dimen/marginBasex6"
+                    local:MvxBind="Text AppVersion" />
+            </LinearLayout>
+            <TextRegular
+                android:text="App language"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:layout_marginLeft="@dimen/marginBasex4"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = AppLanguageText" />
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:layout_marginLeft="@dimen/marginBasex6"
+                android:layout_marginRight="@dimen/marginBasex6"
+                android:layout_gravity="center_horizontal"
+                android:background="@android:drawable/edit_text">
+                <MvxSpinner
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:background="@android:color/transparent"
+                    android:gravity="center_vertical"
+                    android:textColor="#ffffff"
+                    local:MvxItemTemplate="@layout/dropdown_item"
+                    local:MvxDropDownItemTemplate="@layout/dropdownitems"
+                    local:MvxBind="ItemsSource Languages; SelectedItem Language" />
+            </FrameLayout>
+        <!--<TextRegular
+                android:text="Field 1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textMediumLarge"
+                android:textColor="#ffffff"
+                android:layout_marginTop="@dimen/marginBasex5"
+                android:layout_marginLeft="@dimen/marginBasex4" />
+            <EditTextRegular
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etEmail"
+                android:layout_marginLeft="@dimen/marginBasex6"
+                android:layout_marginRight="@dimen/marginBasex6"
+                android:background="@drawable/bg_edittext"
+                android:paddingLeft="@dimen/marginBasex2"
+                android:paddingRight="@dimen/marginBasex2"
+                android:layout_marginTop="@dimen/marginBasex2"
+                local:MvxBind="Text Email" />-->
+        <!--<TextRegular
+                android:text="Field 2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_marginLeft="@dimen/marginBasex4"
+                android:layout_marginTop="@dimen/marginBasex2" />
+        -->
+        <!--local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = OrText"-->
+        <!--
+            <EditTextRegular
+                android:inputType="text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/etPassword"
+                android:layout_marginLeft="@dimen/marginBasex6"
+                android:layout_marginRight="@dimen/marginBasex6"
+                android:background="@drawable/bg_edittext"
+                android:paddingLeft="@dimen/marginBasex2"
+                android:paddingRight="@dimen/marginBasex2"
+                android:layout_marginTop="@dimen/marginBasex2"
+                local:MvxBind="Text Password" />-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/marginBasex4"
+                android:orientation="horizontal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left|center_vertical">
+                <TextRegular
+                    android:text="Use Waze Navigation"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/marginBasex4"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_marginRight="@dimen/marginBasex5"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_vertical"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = UseWazeText" />
+            <!--<CheckBox
+                    android:id="@+id/cb_conect_forget"
+                    android:layout_width="@dimen/marginBasex20"
+                    android:layout_height="@dimen/marginBasex8"
+                    android:layout_marginRight="@dimen/marginBasex6"
+                    android:background="@null"
+                    android:button="@null"
+                    android:checked="false"
+                    android:drawableLeft="@drawable/selector_yes_no"
+                    android:textOff=""
+                    android:textOn=""
+                    android:visibility="visible"
+                    local:MvxBind="Checked IsWazeInstalled" />-->
+                <CheckBox
+                    android:layout_marginRight="@dimen/marginBasex6"
+                    android:checked="false"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    local:MvxBind="Checked IsWazeInstalled"
+                    android:visibility="visible" />
+            </LinearLayout>
+        <!--<TextRegular
+                android:id="@+id/tvDone"
+                android:text="Done"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:textColor="#2487c8"
+                android:gravity="bottom|center_horizontal"
+                android:textSize="@dimen/textLarge"
+                android:layout_marginBottom="@dimen/marginBasex2"
+                android:layout_marginTop="@dimen/marginBasex10"
+                local:MvxBind="Click SaveSettingsCommand;Text TextSource, Converter = Language, ConverterParameter = DoneText" />-->
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,16 @@
+﻿{
+	"PageTitle": "Add event",
+	"EditPageTitle": "Update event",
+	"BookingTitle" : "Booking",
+	"UnavailabilityTitle" : "Unavailability",
+	"BackTitle" : "Back",
+	"TitleText" : "Title:",
+	"StartDateText" : "Start Date:",
+	"EndDateText" : "End Date:",
+	"PerodicityText" :  "Perodicity",
+	"AddText" : "Add",
+	"EditText" : "Save",
+	"RepeatText": "Repeat",
+	"TimesText" : "Times",
+	"CancelText" : "Cancel",
+}

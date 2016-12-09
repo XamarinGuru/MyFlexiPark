@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="cxk-wN-pdQ" customClass="ParkingSlotCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHO-zf-iKo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6456" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="97D-35-NXR">
+                                <rect key="frame" x="40" y="12" width="75" height="41"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="35"/>
+                                <color key="textColor" red="0.13725490196078433" green="0.53725490196078429" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6 €" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="W5K-Lc-pPY">
+                                <rect key="frame" x="155" y="8" width="84" height="49"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="0Rz-9O-MFZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="42"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2l-Vw-HgU">
+                                <rect key="frame" x="329" y="21" width="70" height="22"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="6ZU-bb-JZn"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MyFlexyPark" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgR-2j-CRj">
+                                <rect key="frame" x="239" y="17" width="160" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.44705882352941179" green="0.74117647058823533" blue="0.14509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green_icon_clock.png" translatesAutoresizingMaskIntoConstraints="NO" id="bea-ZT-32g">
+                                <rect key="frame" x="15" y="25" width="15" height="15"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="bea-ZT-32g" secondAttribute="height" multiplier="1:1" id="iWx-X5-LVx"/>
+                                    <constraint firstAttribute="width" constant="15" id="j6s-NE-h2b"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AgR-2j-CRj" firstAttribute="width" secondItem="tHO-zf-iKo" secondAttribute="width" multiplier="160:414" id="Fzp-0x-UoO"/>
+                            <constraint firstAttribute="trailing" secondItem="AgR-2j-CRj" secondAttribute="trailing" constant="15" id="JBJ-eH-Gmi"/>
+                            <constraint firstItem="97D-35-NXR" firstAttribute="width" secondItem="tHO-zf-iKo" secondAttribute="width" multiplier="75:414" id="KVT-ox-8yx"/>
+                            <constraint firstAttribute="centerY" secondItem="W5K-Lc-pPY" secondAttribute="centerY" id="QLM-GF-B9e"/>
+                            <constraint firstAttribute="centerX" secondItem="W5K-Lc-pPY" secondAttribute="centerX" constant="10" id="S3z-6w-J9z"/>
+                            <constraint firstItem="bea-ZT-32g" firstAttribute="leading" secondItem="tHO-zf-iKo" secondAttribute="leading" constant="15" id="Ynx-lD-equ"/>
+                            <constraint firstItem="97D-35-NXR" firstAttribute="leading" secondItem="bea-ZT-32g" secondAttribute="trailing" constant="10" id="fr0-Kk-LIH"/>
+                            <constraint firstAttribute="trailing" secondItem="M2l-Vw-HgU" secondAttribute="trailing" constant="15" id="gco-Gl-cMi"/>
+                            <constraint firstAttribute="centerY" secondItem="M2l-Vw-HgU" secondAttribute="centerY" id="iac-eR-wXp"/>
+                            <constraint firstAttribute="width" secondItem="M2l-Vw-HgU" secondAttribute="width" multiplier="414:70" id="jNi-4D-dNi"/>
+                            <constraint firstAttribute="centerY" secondItem="97D-35-NXR" secondAttribute="centerY" id="pv5-CG-fa9"/>
+                            <constraint firstAttribute="centerY" secondItem="AgR-2j-CRj" secondAttribute="centerY" id="s1W-E3-71O"/>
+                            <constraint firstAttribute="centerY" secondItem="bea-ZT-32g" secondAttribute="centerY" id="uJy-a5-IID"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" red="0.12156862745098039" green="0.12156862745098039" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="tHO-zf-iKo" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="3Oc-IX-iJ4"/>
+                    <constraint firstAttribute="bottom" secondItem="tHO-zf-iKo" secondAttribute="bottom" id="7W4-Va-71Y"/>
+                    <constraint firstItem="tHO-zf-iKo" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" id="gzb-bR-3kE"/>
+                    <constraint firstAttribute="trailing" secondItem="tHO-zf-iKo" secondAttribute="trailing" id="xdz-cn-Gbx"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+            <connections>
+                <outlet property="ivClock" destination="bea-ZT-32g" id="J0D-ds-ZhD"/>
+                <outlet property="lbDistance" destination="97D-35-NXR" id="hNs-7A-Cyh"/>
+                <outlet property="lbPrice" destination="W5K-Lc-pPY" id="PKJ-L3-bdB"/>
+                <outlet property="lbProvider" destination="AgR-2j-CRj" id="9Y4-4f-Bno"/>
+                <outlet property="vRating" destination="M2l-Vw-HgU" id="UCu-lI-4tm"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="green_icon_clock.png" width="512" height="512"/>
+    </resources>
+</document>

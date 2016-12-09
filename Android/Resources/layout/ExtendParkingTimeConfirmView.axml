@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/header">
+    <!--<TextViewWithFont
+            android:text="09:12:00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind=" Font 'helvetica-neue-bold.ttf'; Text TotalParkingTime, Converter =ParkingTimerConverter " />-->
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind=" Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/marginBasex3"
+            android:layout_weight="0.1">
+        <!--<LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:layout_marginLeft="@dimen/marginBasex3">
+                <TextRegular
+                    android:text="04:56"
+                    android:textColor="#ffffff"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text BookingTime, Converter= BookingTimer" />
+                <TextRegular
+                    android:text="before removing this form"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="@dimen/marginBasex2"
+                    android:textSize="@dimen/textMedium"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BeforeRemovingThisFormText" />
+            </LinearLayout>-->
+            <TextRegular
+                android:text="Extending"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textExtraLarge"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:layout_marginLeft="@dimen/marginBasex3"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = ExtendingText" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:layout_marginLeft="@dimen/marginBasex3">
+                <TextRegular
+                    android:text="Cost:"
+                    android:layout_weight="1"
+                    android:layout_width="@dimen/marginBasex20"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = CostText" />
+                <TextRegular
+                    android:text="2 €"
+                    android:layout_width="@dimen/marginBasex20"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textColor="#ffffff"
+                    android:layout_gravity="center_vertical"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_weight="1"
+                    local:MvxBind="Text Cost, Converter = Money" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:layout_marginLeft="@dimen/marginBasex3">
+                <TextRegular
+                    android:text="Duration:"
+                    android:id="@+id/textView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = DurationText" />
+                <TextRegular
+                    android:text="2 hours"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:layout_weight="1"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text Duration, Converter = DurationConverter" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:layout_marginLeft="@dimen/marginBasex3">
+                <TextRegular
+                    android:text="End of reservation:"
+                    android:id="@+id/textView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = EndOfReservationText" />
+                <TextRegular
+                    android:text="16h44"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text EndTime, Converter = ValidTime" />
+            </LinearLayout>
+            <TextRegular
+                android:text="Vehicle:"
+                android:id="@+id/textView3"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_width="match_parent"
+                android:textColor="#ffffff"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginBasex3"
+                android:layout_marginTop="@dimen/marginBasex3"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = VehicleText" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:minWidth="25px"
+                android:minHeight="25px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/linearLayout3"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:layout_marginLeft="@dimen/marginBasex3"
+                android:weightSum="1"
+                android:layout_gravity="center_horizontal"
+                local:MvxBind="Click GotoChooseVehicleCommand">
+                <TextViewWithFont
+                    android:text="1-BZU-563"
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffff"
+                    android:layout_weight="0.12"
+                    android:textSize="@dimen/textLarge"
+                    local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'; Text Text Vehicle.PlateNumber" />
+                <TextViewWithFont
+                    android:text="city car"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_marginLeft="@dimen/marginBasex9"
+                    local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'; Text Vehicle.Type" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/marginBasex3"
+                android:layout_marginTop="@dimen/marginBasex3">
+                <TextRegular
+                    android:text="Remaining credits:"
+                    android:id="@+id/textView3"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = RemainingCreditsText" />
+                <TextRegular
+                    android:text="7€"
+                    android:id="@+id/textView3"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    local:MvxBind="Text RemainingCredits, Converter = Money" />
+            </LinearLayout>
+            <TextRegular
+                android:id="@+id/tvPayWithCredits"
+                android:text="Pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:textSize="@dimen/textLarge"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginBasex5"
+                local:MvxBind="Click PayWithCreditsCommand; Text TextSource, Converter = Language, ConverterParameter = PayWithCreditsText" />
+            <TextRegular
+                android:id="@+id/tvBuyCredits"
+                android:text="Buy credits"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#2487c8"
+                android:layout_gravity="left"
+                android:textSize="@dimen/textLarge"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:layout_marginLeft="@dimen/marginBasex3"
+                local:MvxBind="Click BuyCreditsCommand; Visible IsShowBuyCredits; Text TextSource, Converter = Language, ConverterParameter = BuyCreditsText" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

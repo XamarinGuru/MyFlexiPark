@@ -1,0 +1,16 @@
+﻿{
+	"PageTitle": "Booking",
+	"BackTitle" : "Back",
+	"BeforeRemovingThisFormText" : "before removing this form",
+	"CostText" : "Cost:",
+	"ToWaitText" : "4' to wait",
+	"DurationText" : "Duration:",
+	"HoursText" : "2 hours",
+	"EndOfReservationText" : "End of reservation:",
+	"VehicleText" : "Vehicle:",
+	"CityCarText" : "city car",
+	"PayWithCreditCardText" : "Pay with credit card:",
+	"PayNowText" : "Pay Now!",
+	"RemainingCreditsText": "Remaining credits:",
+	"BuyCreditsText": "Buy credits",
+}

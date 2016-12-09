@@ -1,0 +1,20 @@
+﻿{
+	"TurnOnInternetText": "Please turn on internet!",
+	"TurnOnGPSText": "Please turn on GPS!",
+	"WarningText": "Warning",
+	"YesText": "Yes",
+	"NoText": "No",
+	"OKText": "OK",
+	"CancelText": "Cancel",
+	"SettingText": "Setting",
+	"MessageTitle": "Message",
+	"GGPlayNotInstalledText": "Google Play Services is not installed",
+	"AcceptTermsText": "Please accept terms of use !",
+	"TimeOutText": "Out of time!",
+	"TenMinutesToLeavingText": "10 minutes before leaving",
+	"AlertText": "Alert",
+	"ExtendText": "Extend",
+		"SuccessText": "Success",
+	"ExtendSuccessfullyText": "Extend successfully fr!",
+
+}

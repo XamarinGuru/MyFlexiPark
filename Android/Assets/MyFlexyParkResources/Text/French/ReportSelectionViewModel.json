@@ -1,0 +1,28 @@
+{
+	"PageTitle":  "Signaler",
+   "BackTitle" : "Retour",
+   "ReportAProblemText" :  "Signaler un problème",
+   "ReportText" :  "Signaler",
+   "PlateNumberText" :  "Numéro de plaque",
+   "ProblemText" : "Problème",
+   "TakeAPictureText" :  "Prendre une photo",
+
+
+	"ExitText" :  "Sortie",
+	"ExtensionText" : "Prolongation",
+	"AlreadyTakenText" : "Le parking est déjà loué",
+	"CarOnTheStreetText" : "Il y a un véhicule garé sur la rue devant le parking",
+	"NoMarkText" : "Il n'y a pas de signalisation MyflexyPark sur la porte du garage",
+	"NoSpotText" : "Il n'y a pas de parking",
+	"ParkingFullText" : "Le parking est complet",
+	"RefuseTheSpotText" : "Je refuse ce parking",
+	"CanNotLeaveText" : "Je ne peux pas quitter le parking",
+	"LeaveAndReportProblemText" : "Je quite et signale un problème",
+	"PleaseChooseOptionText": "Sélectionner une option",
+	
+	"CancelText":"Annuler",
+
+
+	"SelectFromLibraryText":"Sélectionner à partir du catalogue"
+
+}

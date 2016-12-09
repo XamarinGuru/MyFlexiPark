@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parentView"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/header">
+        <TextViewWithFont
+            android:text="Search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Font 'helvetica-neue-bold.ttf'; Text TextSource, Converter = Language, ConverterParameter = PageTitle" />
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="@dimen/marginBasex4"
+        android:layout_marginRight="@dimen/marginBasex4"
+        android:layout_marginTop="@dimen/marginBasex4"
+        android:layout_marginBottom="@dimen/marginBasex5"
+        android:orientation="vertical">
+        <TextRegular
+            android:id="@+id/tvSearchingFor"
+            android:text="Book for: "
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BookForText" />
+        <TextViewWithFont
+            android:id="@+id/tvVehicle"
+            android:text="1-ABC-111 compact"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginBasex2"
+            android:gravity="center"
+            android:textColor="@color/text"
+            android:textSize="@dimen/textExtraLarge"
+            local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'; Click GotoChooseVehicleCommand; Text PlateNumber" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginBasex2"
+            android:orientation="vertical"
+            local:MvxBind="Visible SearchMode, Converter = SearchModeConverter">
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextRegular
+                        android:text="Start Date: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffffff"
+                        android:layout_marginRight="@dimen/marginBasex2"
+                        android:textSize="@dimen/textMediumLarge"
+                        local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = StartDateText" />
+                    <TextRegular
+                        android:id="@+id/etStartDate"
+                        android:text="07/21/2015"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/bg_edittext"
+                        android:padding="@dimen/marginBasex2"
+                        local:MvxBind="Text StartBookingDateTime, Converter = DateTimeToStringConverter, ConverterParameter = 'Date'"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/textMediumLarge" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:orientation="horizontal">
+                    <TextRegular
+                        android:text="Start Hour: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffffff"
+                        android:layout_marginRight="@dimen/marginBasex2"
+                        android:textSize="@dimen/textMediumLarge"
+                        local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = StartHourText" />
+                    <TextRegular
+                        android:id="@+id/etStartHour"
+                        android:text="20:16 AM"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:background="@drawable/bg_edittext"
+                        android:padding="@dimen/marginBasex2"
+                        local:MvxBind="Text StartBookingDateTime, Converter = DateTimeToStringConverter, ConverterParameter = 'Time'"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/textMediumLarge" />
+                </TableRow>
+            <!--<TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/marginBasex2">
+                    <TextRegular
+                        android:text="Str. Number:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffffff"
+                        android:layout_marginRight="@dimen/marginBasex2"
+                        android:textSize="@dimen/textMediumLarge" />
+                    <EditTextRegular
+                        android:id="@+id/etStrNumber"
+                        android:text="07/21/2015"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:gravity="left|center_vertical"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_edittext"
+                        android:padding="@dimen/marginBasex2"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/textMediumLarge"
+                        local:MvxBind="Text StrNumber" />
+                </TableRow>-->
+                <TableRow
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:orientation="horizontal">
+                    <TextRegular
+                        android:text="Street:"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffffff"
+                        android:layout_marginRight="@dimen/marginBasex2"
+                        android:textSize="@dimen/textMediumLarge"
+                        local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = StreetText" />
+                    <EditTextRegular
+                        android:id="@+id/etStr"
+                        android:text="20:16 AM"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:singleLine="true"
+                        android:layout_height="wrap_content"
+                        android:gravity="left|center_vertical"
+                        android:background="@drawable/bg_edittext"
+                        android:padding="@dimen/marginBasex2"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/textMediumLarge"
+                        local:MvxBind="Text Street" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_marginTop="@dimen/marginBasex2">
+            <TextRegular
+                android:id="@+id/tvSearch"
+                android:text="Check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:textColor="@color/text"
+                android:textSize="@dimen/textLarge"
+                local:MvxBind="Click CheckPlacesCommand; Text TextSource, Converter = Language, ConverterParameter = SearchText; Visible IsCheckVisible" />
+            <TextRegular
+                android:text="Check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:layout_gravity="right"
+                android:textSize="@dimen/textLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = SearchText; Visible IsCheckVisible, Converter = InverterBool" />
+        </FrameLayout>
+        <MvxListView
+            android:layout_marginTop="@dimen/marginBasex2"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            local:MvxItemTemplate="@layout/parkingsearchviewitem"
+            local:MvxBind="ItemsSource Places; ItemClick SelectPlaceCommand" />
+    </LinearLayout>
+</LinearLayout>

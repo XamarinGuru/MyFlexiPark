@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/header">
+        <TextViewWithFont
+            android:text="Report"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Font 'helvetica-neue-bold.ttf'; Text TextSource, Converter = Language, ConverterParameter = PageTitle" />
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="@dimen/marginBasex2"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                local:MvxBind="Visible , Converter = ReportToBool, ConverterParameter = FlateNumber">
+                <TextRegular
+                    android:text="Plate Number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_marginLeft="@dimen/marginBasex3"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = PlateNumberText" />
+                <EditTextRegular
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex4"
+                    android:textColor="#000000"
+                    android:lines="1"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2"
+                    android:layout_marginLeft="@dimen/marginBasex5"
+                    android:layout_marginRight="@dimen/marginBasex5"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text PlateNumber" />
+                <TextRegular
+                    android:text="Plate Number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex10"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = YouWillBeRefundText" />
+            <!--local:MvxBind="Text PlateNumber"-->
+                <TextRegular
+                    android:id="@+id/tvReport"
+                    android:text="OK"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex10"
+                    android:layout_marginBottom="@dimen/marginBasex2"
+                    android:gravity="center"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/textLarge"
+                    local:MvxBind="Click SendReportCommand " />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                local:MvxBind="Visible , Converter = ReportToBool, ConverterParameter = Refund">
+                <TextRegular
+                    android:text="Plate Number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex15"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:layout_marginBottom="@dimen/marginBasex10"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = YouWillBeRefundText" />
+                <TextRegular
+                    android:id="@+id/tvReport"
+                    android:text="OK"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_marginBottom="@dimen/marginBasex2"
+                    android:gravity="center"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/textLarge"
+                    local:MvxBind="Click SendReportCommand " />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                local:MvxBind="Visible , Converter = ReportToBool, ConverterParameter = Full">
+                <TextRegular
+                    android:text="Plate Number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex15"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:layout_marginBottom="@dimen/marginBasex10"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = NewParkingSpotText" />
+                <TextRegular
+                    android:id="@+id/tvReport"
+                    android:text="OK"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_marginBottom="@dimen/marginBasex2"
+                    android:gravity="center"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/textLarge"
+                    local:MvxBind="Click SendReportCommand" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/marginBasex2"
+                local:MvxBind="Visible , Converter = ReportToBool, ConverterParameter = PictureRefuse">
+                <TextRegular
+                    android:text="Problem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = ProblemText" />
+                <EditTextRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:singleLine="false"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2"
+                    android:textColor="#000000"
+                    android:gravity="left|top"
+                    android:lines="4"
+                    local:MvxBind="Text Problem" />
+                <TextRegular
+                    android:id="@+id/tvTakeAPicture"
+                    android:text="Take a picture"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_marginBottom="@dimen/marginBasex2"
+                    android:gravity="center"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/textLarge"
+                    local:MvxBind="Click AddPictureCommand; Text TextSource, Converter = Language, ConverterParameter = TakeAPictureText" />
+                <BindableImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/marginBasex40"
+                    android:paddingBottom="@dimen/marginBasex2"
+                    android:background="@android:color/transparent"
+                    local:MvxBind="Bytes Image" />
+                <TextRegular
+                    android:text="Plate Number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = NewParkingSpotText" />
+                <TextRegular
+                    android:text="Plate Number"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = PleaseContactText" />
+                <TextRegular
+                    android:id="@+id/tvReport"
+                    android:text="OK"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex4"
+                    android:paddingBottom="@dimen/marginBasex4"
+                    android:gravity="center"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/textLarge"
+                    local:MvxBind="Click SendReportCommand " />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="@dimen/marginBasex15"
+                android:gravity="center"
+                android:orientation="vertical"
+                local:MvxBind="Visible , Converter = ReportToBool, ConverterParameter = CallOwner">
+                <TextRegular
+                    android:text="Call Owner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Click CallOwnerCommand; Text TextSource, Converter = Language, ConverterParameter = CallOwnerText" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/marginBasex2"
+                local:MvxBind="Visible , Converter = ReportToBool, ConverterParameter = PictureLeave">
+                <TextRegular
+                    android:text="Problem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#ffffffff"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = ProblemText" />
+                <EditTextRegular
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:singleLine="false"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2"
+                    android:textColor="#000000"
+                    android:gravity="left|top"
+                    android:lines="4"
+                    local:MvxBind="Text Problem" />
+                <TextRegular
+                    android:id="@+id/tvTakeAPicture"
+                    android:text="Take a picture"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_marginBottom="@dimen/marginBasex2"
+                    android:gravity="center"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/textLarge"
+                    local:MvxBind="Click AddPictureCommand; Text TextSource, Converter = Language, ConverterParameter = TakeAPictureText" />
+                <BindableImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/marginBasex40"
+                    android:paddingBottom="@dimen/marginBasex2"
+                    android:scaleType="fitCenter"
+                    local:MvxBind="Bytes Image" />
+                <TextRegular
+                    android:id="@+id/tvReport"
+                    android:text="OK"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:paddingBottom="@dimen/marginBasex4"
+                    android:gravity="center"
+                    android:textColor="@color/text"
+                    android:textSize="@dimen/textLarge"
+                    local:MvxBind="Click SendReportCommand " />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

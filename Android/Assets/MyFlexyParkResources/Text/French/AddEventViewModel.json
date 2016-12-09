@@ -1,0 +1,15 @@
+﻿{
+   "PageTitle": "Ajouter un évènement",
+   "EditPageTitle":  "Actualiser un évènement",
+   "BookingTitle" : "Réservation",
+   "UnavailabilityTitle" : "Évènement",
+   "BackTitle" :  "Retour",
+   "TitleText" :  "Titre",
+   "StartDateText" :  "Date d’arrivée:",
+   "EndDateText" : "Date de départ:",
+   "PeridocityText": "Périodicité",
+   "AddText" :  "Ajouter",
+   "EditText" :  "Actualiser",
+   "RepeatText": "Répéter",
+	"TimesText" : "Fois",
+}

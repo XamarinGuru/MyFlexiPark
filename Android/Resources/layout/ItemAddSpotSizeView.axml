@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/marginBasex3"
+    android:paddingBottom="@dimen/marginBasex3"
+    android:paddingLeft="@dimen/marginBasex4"
+    android:paddingRight="@dimen/marginBasex4"
+    android:gravity="center"
+    android:background="@drawable/listselector"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TextRegular
+        android:text="YYYYyyyy"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="@dimen/textMediumLarge"
+        android:singleLine="true"
+        android:gravity="center_vertical"
+        android:layout_gravity="left"
+        android:textColor="#ffffff"
+        local:MvxBind="Text Type" />
+    <ImageView
+        android:layout_marginLeft="@dimen/marginBasex3"
+        android:layout_width="@dimen/marginBasex4"
+        android:layout_height="@dimen/marginBasex4"
+        android:src="@drawable/blue_icon_checkmark"
+        local:MvxBind="Visible IsChecked" />
+</LinearLayout>

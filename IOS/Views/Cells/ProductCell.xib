@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="44" id="cxk-wN-pdQ" customClass="ProductCell">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="65"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cxk-wN-pdQ" id="YTl-1W-gDM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i1P-wc-NSk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="64"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 hours" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DSI-s7-o5G">
+                                <rect key="frame" x="15" y="15" width="229" height="35"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.13725490200000001" green="0.53725490200000003" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2di-f8-6Ye">
+                                <rect key="frame" x="259" y="9" width="140" height="47"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="2di-f8-6Ye" secondAttribute="centerY" id="0Pf-aG-8eF"/>
+                            <constraint firstAttribute="centerY" secondItem="DSI-s7-o5G" secondAttribute="centerY" id="AAc-sT-6o7"/>
+                            <constraint firstAttribute="trailing" secondItem="2di-f8-6Ye" secondAttribute="trailing" constant="15" id="NCe-f2-pOT"/>
+                            <constraint firstAttribute="width" secondItem="2di-f8-6Ye" secondAttribute="width" multiplier="414:140" id="ePq-HZ-Ek2"/>
+                            <constraint firstItem="DSI-s7-o5G" firstAttribute="leading" secondItem="i1P-wc-NSk" secondAttribute="leading" constant="15" id="krw-th-uUK"/>
+                            <constraint firstItem="2di-f8-6Ye" firstAttribute="leading" secondItem="DSI-s7-o5G" secondAttribute="trailing" constant="15" id="vCY-6M-hUM"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="i1P-wc-NSk" firstAttribute="top" secondItem="YTl-1W-gDM" secondAttribute="top" id="IJD-TL-St6"/>
+                    <constraint firstItem="i1P-wc-NSk" firstAttribute="leading" secondItem="YTl-1W-gDM" secondAttribute="leading" id="Npx-bq-xXf"/>
+                    <constraint firstAttribute="trailing" secondItem="i1P-wc-NSk" secondAttribute="trailing" id="OoV-AK-K3a"/>
+                    <constraint firstAttribute="bottom" secondItem="i1P-wc-NSk" secondAttribute="bottom" id="yp9-Jk-y57"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <color key="backgroundColor" red="0.1215686275" green="0.1215686275" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <connections>
+                <outlet property="lbName" destination="DSI-s7-o5G" id="0OR-Ww-R0u"/>
+                <outlet property="lbPrice" destination="2di-f8-6Ye" id="G5x-gZ-efS"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

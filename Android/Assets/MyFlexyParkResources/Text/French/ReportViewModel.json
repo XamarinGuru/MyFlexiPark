@@ -1,0 +1,34 @@
+﻿{
+	"PageTitle":  "Signaler",
+   "BackTitle" : "Retour",
+   "ReportAProblemText" :  "Signaler un problème",
+   "ReportText" :  "Signaler",
+   "PlateNumberText" :  "Blocage de la plaque d'immatriculation(*)",
+   "ProblemText" : "Description du problème(*)",
+   "TakeAPictureText" :  "Prendre une photo",
+
+
+	"ExitText" :  "Sortie",
+	"ExtensionText" : "Prolongation",
+	"AlreadyTakenText" : "Le parking est occupé",
+	"CarOnTheStreetText" : "Il y a une voiture garée devant l’entrée du parking",
+	"NoMarkText" : "Il n’y a pas de signalisation sur la porte du garage",
+	"NoSpotText" : "Parking n’existe pas",
+	"ParkingFullText" : "Le parking est complet",
+	"RefuseTheSpotText" : "Je refuse ce parking",
+	"CanNotLeaveText" : "Je ne peux pas quitter le parking",
+	"LeaveAndReportProblemText" : "Je quitte et signale un problème",
+
+	"PleaseChooseOptionText": "Sélectionner une option",
+	"CancelText":"Annuler",
+	"SelectFromLibraryText":"Sélectionner à partir du catalogue",
+	"TakeAPictureText" :  "Prendre une photo",
+
+	"PleaseFillPlateNumberText" : "Merci de donner votre plaque d'immatriculation",
+	"PleaseFillProblemText": "Veuillez nous informer du problème",
+	"NewParkingSpotText": "Un nouveau parking va vous être proposé",
+	"YouWillBeRefundText": "Vous serez remboursé. Merci de confirmer la libération du parking et de montrer les autres parkings",
+	"PleaseContactText" : "Merci de contacter MyflexyPark pour le remboursement: info@myflexypark.be",
+	"CallOwnerText":"Propriétaire Appel",
+
+}

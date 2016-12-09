@@ -1,0 +1,9 @@
+{
+	"PageTitle": "Ajouter un parking",
+	"BackTitle" : "Retour",
+	"PleaseWaitText" : "Merci d'attendre que le GPS se positionne",
+	"CurrentGPSAccuracyText" : "Précision actuelle du GPS :",
+	"CurrentGPSCoorText" : "Coordonnées GPS actuelles :",
+	"GPSTargetText" :  "Objectif de précision du GPS :",
+	"IfYourText" : "Si votre portable ne peut pas atteindre la précision du GPS dans 2 minutes, rééssayez ou contactez nous sur info@myflexypark.be"
+}

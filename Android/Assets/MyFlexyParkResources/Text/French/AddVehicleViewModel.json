@@ -1,0 +1,13 @@
+﻿{
+	   "PageTitle":  "Ajouter un véhicule",
+   "EditPageTitle":  "Actualiser le véhicule",
+   "EditVehicleText":  "Actualiser le véhicule",
+   "AddVehicleText":  "Ajouter un véhicule",
+   "BackTitle" :  "Retour",
+   "AddText" :  "Ajouter",
+   "EditText" :  "Actualiser",
+   "PlateNumberText" :  "Plaque d’immatriculation",
+	"PleaseEnterPlateNumberText" : "Introduisez une plaque d'immatriculation",
+	"PleaseChooseVehicleTypeText" : "Choisir le type de véhicule",
+	
+}

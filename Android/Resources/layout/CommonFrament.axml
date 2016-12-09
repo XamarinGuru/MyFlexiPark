@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg"
+    android:weightSum="1">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:orientation="vertical">
+                <TextRegular
+                    android:id="@+id/tvLogout"
+                    android:text="Logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#2487c8"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/marginBasex4"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Click LogoutCommand; Visible IsShowInfo" />
+                <TextRegular
+                    android:text="First name"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="@dimen/marginBasex4"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = FirstNameText" />
+                <EditTextRegular
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_marginLeft="@dimen/marginBasex6"
+                    android:layout_marginRight="@dimen/marginBasex6"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    local:MvxBind="Text User.FirstName" />
+                <TextRegular
+                    android:text="Last name"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="@dimen/marginBasex4"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = LastNameText" />
+                <EditTextRegular
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_marginLeft="@dimen/marginBasex6"
+                    android:layout_marginRight="@dimen/marginBasex6"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    local:MvxBind="Text User.LastName" />
+                <TextRegular
+                    android:text="Email"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="@dimen/marginBasex4"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = EmailText" />
+                <EditTextRegular
+                    android:inputType="textEmailAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etEmail"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_marginLeft="@dimen/marginBasex6"
+                    android:layout_marginRight="@dimen/marginBasex6"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    local:MvxBind="Text User.Email" />
+                <TextRegular
+                    android:text="Password"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView2"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="@dimen/marginBasex4"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = PasswordText" />
+                <EditTextRegular
+                    android:inputType="textPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/etPassword"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_marginLeft="@dimen/marginBasex6"
+                    android:layout_marginRight="@dimen/marginBasex6"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    local:MvxBind="Text Password" />
+                <TextRegular
+                    android:text="Mobile number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="@dimen/marginBasex4"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = MobileNumberText" />
+                <EditTextRegular
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_marginLeft="@dimen/marginBasex6"
+                    android:layout_marginRight="@dimen/marginBasex6"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    local:MvxBind="Text User.PhoneNumber" />
+                <TextRegular
+                    android:text="Promo code"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="@dimen/marginBasex4"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = PromoCodeText" />
+                <EditTextRegular
+                    android:inputType="text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_marginLeft="@dimen/marginBasex6"
+                    android:layout_marginRight="@dimen/marginBasex6"
+                    android:background="@drawable/bg_edittext"
+                    android:padding="@dimen/marginBasex2"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    local:MvxBind="Text PromoCode" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                local:MvxBind="Visible IsShowInfo">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:orientation="horizontal">
+                    <TextRegular
+                        android:text="Terms of Use version:"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="left|center_vertical"
+                        android:textSize="@dimen/textMediumLarge"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="@dimen/marginBasex4"
+                        local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = TermsOfUseVersionText" />
+                    <TextRegular
+                        android:text="1.0"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right|center_vertical"
+                        android:textSize="@dimen/textMediumLarge"
+                        android:layout_marginRight="@dimen/marginBasex6"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:orientation="horizontal">
+                    <TextRegular
+                        android:text="Created date:"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="left|center_vertical"
+                        android:textSize="@dimen/textMediumLarge"
+                        android:textColor="#ffffff"
+                        android:layout_marginLeft="@dimen/marginBasex4"
+                        local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = CreatedDateText" />
+                    <TextRegular
+                        android:text="27/07/2015"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/marginBasex6"
+                        android:layout_gravity="right|center_vertical"
+                        android:textSize="@dimen/textMediumLarge"
+                        android:textColor="#ffffff" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextRegular
+                android:id="@+id/tvReadTermsOfUse"
+                android:layout_marginTop="@dimen/marginBasex5"
+                android:text="@string/readtermsofuse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/text"
+                android:layout_gravity="right"
+                android:textStyle=""
+                android:layout_marginRight="@dimen/marginBasex6"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Click ReadTermsOfUseCommand; Text TextSource, Converter = Language, ConverterParameter = ReadTermsOfUseText" />
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/marginBasex4"
+                android:layout_marginRight="@dimen/marginBasex2"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    local:MvxBind="Checked IsAcceptTerms" />
+                <TextRegular
+                    android:text="I accept your terms of use"
+                    android:layout_marginLeft="@dimen/marginBase"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="#ffffff"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/textMediumLarge"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = IAcceptYourTermsOfUseText" />
+            </LinearLayout>
+            <TextRegular
+                android:id="@+id/tvOk"
+                android:text="OK"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#2487c8"
+                android:layout_marginTop="@dimen/marginBasex5"
+                android:layout_marginBottom="@dimen/marginBasex4"
+                android:gravity="center"
+                android:layout_marginRight="@dimen/marginBasex6"
+                android:textSize="@dimen/textLarge"
+                local:MvxBind="Click SignUpOrUpdateCommand; Text TextSource, Converter = Language, ConverterParameter = OkText" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white"
+    android:splitMotionEvents="true"
+    android:weightSum="1">
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="#2487c8">
+        <TextViewWithFont
+            android:text="Configuration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Font 'helvetica-neue-bold.ttf'; Text TextSource, Converter = Language, ConverterParameter = PageTitle" />
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/MenuBackground">
+        <LinearLayout
+            android:id="@+id/llMyProfile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            local:MvxBind="Click GotoMyProfileCommand">
+            <ImageView
+                android:layout_width="@dimen/marginBasex12"
+                android:layout_height="@dimen/marginBasex12"
+                android:background="@drawable/menu_myprofile"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginBasex5" />
+            <TextRegular
+                android:text="My profile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:textColor="#ffffff"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = MyProfileText" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llSetting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            local:MvxBind="Click GotoAppSettingsCommand">
+            <ImageView
+                android:text="Button"
+                android:layout_width="@dimen/marginBasex12"
+                android:layout_height="@dimen/marginBasex12"
+                android:id="@+id/button2"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginBasex5"
+                android:background="@drawable/menu_settings" />
+            <TextRegular
+                android:text="App settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:textColor="#ffffff"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = AppSettingsText" />
+        </LinearLayout>
+    </LinearLayout>
+<!--</ScrollView>-->
+<!--</LinearLayout>-->
+</LinearLayout>

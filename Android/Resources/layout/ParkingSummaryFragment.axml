@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingRight="@dimen/marginBasex2"
+    android:paddingBottom="@dimen/marginBasex2"
+    android:paddingTop="@dimen/marginBasex2"
+    android:paddingLeft="@dimen/marginBasex4"
+    android:background="@color/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                local:MvxBind="Visible Status, Converter = HideSummaryConverter, ConverterParameter = false">
+                <TextRegular
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMedium"
+                    android:text="5 minutes offered to join your destination"
+                    android:textColor="#999999"
+                    local:MvxBind="Visible IsShowOfferedTime; Text '5', Converter = OfferTimeToLeaveConverter" />
+                <View
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:layout_width="fill_parent"
+                    android:layout_height="1px"
+                    android:background="#ffffff"
+                    local:MvxBind="Visible IsShowOfferedTime" />
+                <TextRegular
+                    android:layout_marginTop="@dimen/marginBasex3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:text="Address"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = AddressText" />
+                <TextViewWithFont
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textExtraLarge"
+                    android:text="rue Malibran 375 "
+                    android:textColor="#ffffff"
+                    local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'" />
+                <TextViewWithFont
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textExtraLarge"
+                    android:text="1050 Brussels"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'" />
+                <TextRegular
+                    android:layout_marginTop="@dimen/marginBasex4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:text="End time"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = EndTimeText" />
+                <TextViewWithFont
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textExtraLarge"
+                    android:text="16h44"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                local:MvxBind="Visible Status, Converter = HideSummaryConverter, ConverterParameter = true">
+                <TextRegular
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:text="Start time"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = StartTimeText" />
+                <TextViewWithFont
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textExtraLarge"
+                    android:text="07/07/15 @ 16h44"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Font 'HelveticaNeue-UltraLight.otf';Text StartTime,Converter=DateTimeToStringConverter,ConverterParameter=Reservation" />
+                <TextRegular
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:text="End time"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = EndTimeText" />
+                <TextViewWithFont
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textExtraLarge"
+                    android:text="07/07/15 @ 16h44"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Font 'HelveticaNeue-UltraLight.otf';Text EndTime,Converter=DateTimeToStringConverter,ConverterParameter=Reservation" />
+                <TextRegular
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:text="Cost"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = CostText" />
+                <TextViewWithFont
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textExtraLarge"
+                    android:text="3 €"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Font 'HelveticaNeue-UltraLight.otf';Text Reservation.Cost,Converter=MoneyStringConverter" />
+                <TextRegular
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:text="Address"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = AddressText" />
+                <TextViewWithFont
+                    android:layout_marginTop="@dimen/marginBase"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textExtraLarge"
+                    android:text="rue Malibran 375 "
+                    android:textColor="#ffffff"
+                    local:MvxBind="Font 'HelveticaNeue-UltraLight.otf';Text Reservation.Parking.Location" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="@dimen/marginBasex4">
+                <TextRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:text="Vehicle"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = VehicleText" />
+                <TextViewWithFont
+                    android:layout_marginLeft="@dimen/marginBasex2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textExtraLarge"
+                    android:text="1-BZU-563   city car"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'; Text Reservation.PlateNumber" />
+                <TextViewWithFont
+                    android:layout_marginLeft="@dimen/marginBasex2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textExtraLarge"
+                    android:text="1-BZU-563   city car"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Font 'HelveticaNeue-UltraLight.otf'; Text Reservation.VehicleType" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/marginBasex3"
+                android:layout_marginBottom="@dimen/marginBasex2"
+                android:gravity="bottom">
+                <LinearLayout
+                    android:id="@+id/llNavigate"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/marginBasex4"
+                    local:MvxBind="Click NavigateCommand">
+                    <ImageView
+                        android:layout_width="@dimen/marginBasex5"
+                        android:layout_height="@dimen/marginBasex5"
+                        android:layout_marginLeft="@dimen/marginBasex2"
+                        android:background="@drawable/blue_icon_car"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/marginBasex2" />
+                    <TextRegular
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="@dimen/textExtraLarge"
+                        android:text="Navigate"
+                        android:textColor="#2487c8"
+                        local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = NavigateText" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/marginBasex4"
+                    local:MvxBind="Visible IsShowLeaveReportButton">
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                   
+                        <FrameLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:id="@+id/flLeaveBlue">
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                local:MvxBind="Click GotoLeaveParkingCommand">
+                                <ImageView
+                                    android:layout_width="@dimen/marginBasex5"
+                                    android:layout_height="@dimen/marginBasex5"
+                                    android:layout_marginLeft="@dimen/marginBasex2"
+                                    android:background="@drawable/blue_icon_turnarrow"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/marginBasex2" />
+                                <TextRegular
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:textSize="@dimen/textExtraLarge"
+                                    android:text="Leave"
+                                    android:textColor="#2487c8"
+                                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = LeaveText" />
+                            </LinearLayout>
+                        </FrameLayout>
+                    </FrameLayout>
+                    <FrameLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                    
+                        <FrameLayout
+                            android:id="@+id/flReportBlue"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            >
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical"
+                                local:MvxBind="Click ReportProblemCommand">
+                                <ImageView
+                                    android:layout_width="@dimen/marginBasex5"
+                                    android:layout_height="@dimen/marginBasex5"
+                                    android:layout_marginLeft="@dimen/marginBasex2"
+                                    android:background="@drawable/blue_icon_warning"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginRight="@dimen/marginBasex2" />
+                                <TextRegular
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:textSize="@dimen/textExtraLarge"
+                                    android:singleLine="true"
+                                    android:ellipsize="end"
+                                    android:text="Report"
+                                    android:textColor="#2487c8"
+                                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = ReportText" />
+                            </LinearLayout>
+                        </FrameLayout>
+                    </FrameLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

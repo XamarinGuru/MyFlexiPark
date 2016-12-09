@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/marginBase"
+    android:paddingTop="@dimen/marginBase"
+    android:background="@drawable/listselector"
+    android:gravity="center_vertical"
+    android:padding="@dimen/marginBasex2"
+    android:orientation="horizontal">
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+        <TextRegular
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Rue Malibra"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Text Summary" />
+        <TextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginBase"
+            android:text="Start Date:"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:textSize="@dimen/textMediumLarge" />
+        <TextRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginBase"
+            android:gravity="center"
+            android:text="Available"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Text StartDate, Converter = EventDateTime ; Font 'HelveticaNeue-UltraLight.otf'" />
+        <TextRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginBase"
+            android:text="End Date:"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:textSize="@dimen/textMediumLarge" />
+        <TextRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/marginBase"
+            android:gravity="center"
+            android:text="Available"
+            android:textColor="#ffffff"
+            android:singleLine="true"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Text EndDate, Converter = EventDateTime; Font 'HelveticaNeue-UltraLight.otf'" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/marginBasex2"
+        android:layout_gravity="center">
+        <ImageView
+            android:id="@+id/ivEdit"
+            android:layout_width="@dimen/marginBasex5"
+            android:layout_height="@dimen/marginBasex5"
+            android:background="@drawable/white_icon_edit_64"
+            local:MvxBind="Visible IsEditMode; Click EditEventCommand" />
+        <LinearLayout
+            android:layout_width="@dimen/marginBasex5"
+            android:layout_height="@dimen/marginBasex5"
+            android:layout_marginTop="@dimen/marginBasex4"
+            android:orientation="vertical"
+            local:MvxBind="Visible IsEditMode, Converter = InverterBool">
+            <ImageView
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:background="@drawable/blue_icon_checkmark"
+                local:MvxBind="Visible IsSelected" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/ivDelete"
+            android:layout_width="@dimen/marginBasex5"
+            android:layout_height="@dimen/marginBasex5"
+            android:layout_marginTop="@dimen/marginBasex4"
+            android:background="@drawable/white_icon_delete"
+            local:MvxBind="Visible IsEditMode; Click DeleteEventCommand" />
+    </LinearLayout>
+</LinearLayout>

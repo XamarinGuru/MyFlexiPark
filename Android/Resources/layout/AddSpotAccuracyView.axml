@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/bg"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/header">
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+        <TextViewWithFont
+            android:layout_marginLeft="@dimen/marginBasex2"
+            android:text="Spot address"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Font 'helvetica-neue-bold.ttf';Text TextSource, Converter = Language, ConverterParameter = PageTitle" />
+        <RelativeLayout
+            android:id="@+id/rlBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:layout_centerVertical="true"
+            local:MvxBind="Click BackCommand">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:layout_centerVertical="true"
+                android:background="@drawable/white_icon_back" />
+            <TextNeueBold
+                android:text="Back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/ivBack"
+                android:layout_centerVertical="true"
+                android:textColor="#ffffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+        </RelativeLayout>
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/marginBasex4"
+            android:layout_marginRight="@dimen/marginBasex4"
+            android:orientation="vertical">
+            <TextRegular
+                android:text="Please wait until the GPS target accuracy is reached."
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="@dimen/textMediumLarge"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:layout_marginRight="@dimen/marginBasex2"
+                android:layout_marginTop="@dimen/marginBasex5"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = PleaseWaitText" />
+            <TextRegular
+                android:layout_marginTop="@dimen/marginBasex4"
+                android:text="Current GPS accuracy: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = CurrentGPSAccuracyText" />
+            <TextRegular
+                android:text="65 meters"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text CurrentAccuracy, Converter = MeterDoubleConverter" />
+            <TextRegular
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:text="Current GPS accuracy: "
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = GPSTargetText" />
+            <TextRegular
+                android:text="65 meters"
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text GPSTarget, Converter = MeterDoubleConverter" />
+            <TextRegular
+                android:layout_marginTop="@dimen/marginBasex4"
+                android:text="Lat"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text CurrentLat, Converter = CoordinatesConverter, ConverterParameter = Lat" />
+            <TextRegular
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:text="Lng"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text CurrentLng, Converter = CoordinatesConverter, ConverterParameter = Lng" />
+            <TextRegular
+                android:layout_marginTop="@dimen/marginBasex8"
+                android:text="Lng"
+                android:layout_marginLeft="@dimen/marginBasex2"
+                android:layout_marginRight="@dimen/marginBasex2"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:gravity="center"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = IfYourText" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

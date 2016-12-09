@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/marginBasex2"
+    android:paddingBottom="@dimen/marginBasex2"
+    android:paddingLeft="@dimen/marginBasex2"
+    android:paddingRight="@dimen/marginBasex2"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/listselector"
+    local:MvxBind="Clickable Enabled, Converter = InverterBool">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <TextRegular
+                android:text="06/07/15"
+                android:layout_height="wrap_content"
+                android:layout_width="fill_parent"
+                android:textColor="#ffffffff"
+                android:lines="1"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = StartTimeText" />
+            <TextRegular
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:id="@+id/tvStartTime"
+                android:text="13h-16h"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffffff"
+                android:lines="1"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text StartTime, Converter = DateTimeToStringConverter, ConverterParameter= 'Reservation'" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/marginBasex4"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+            <TextRegular
+                android:text="06/07/15"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffffff"
+                android:lines="1"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = EndTimeText" />
+            <TextRegular
+                android:layout_marginTop="@dimen/marginBasex2"
+                android:id="@+id/tvEndTime"
+                android:text="13h-16h"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffffff"
+                android:lines="1"
+                android:textSize="@dimen/textMediumLarge"
+                local:MvxBind="Text EndTime, Converter = DateTimeToStringConverter, ConverterParameter= 'Reservation'" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/marginBasex2"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextRegular
+            android:text="Brussels"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:textColor="#2487c8"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Text Reservation.Parking.Location" />
+    </LinearLayout>
+</LinearLayout>

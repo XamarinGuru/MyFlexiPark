@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:splitMotionEvents="true"
+    android:background="@drawable/MenuBackground"
+    android:weightSum="1">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_marginTop="@dimen/marginBasex5"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/llParkMe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                local:MvxBind="Click GotoParkMeCommand">
+                <ImageView
+                    android:id="@+id/ivParkMe"
+                    android:layout_width="@dimen/marginBasex12"
+                    android:layout_height="@dimen/marginBasex12"
+                    android:background="@drawable/menu_parkme"
+                    android:layout_gravity="center_horizontal" />
+                <TextRegular
+                    android:id="@+id/tvParkMe"
+                    android:text="Park me"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginBasex3"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = ParkMeText" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llReservations"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                local:MvxBind="Click GotoMyReservationsCommand">
+                <ImageView
+                    android:id="@+id/ivReservations"
+                    android:layout_width="@dimen/marginBasex12"
+                    android:layout_height="@dimen/marginBasex12"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginBasex5"
+                    android:background="@drawable/menu_reservation" />
+                <TextRegular
+                    android:id="@+id/tvReservations"
+                    android:text="My Reservations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginBasex3"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = MyReservationsText" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llMyOwnParking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                local:MvxBind="Click GotoMyOwnParkingCommand">
+                <ImageView
+                    android:id="@+id/ivMyOwnParking"
+                    android:layout_width="@dimen/marginBasex12"
+                    android:layout_height="@dimen/marginBasex12"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginBasex5"
+                    android:background="@drawable/menu_ownparking" />
+                <TextRegular
+                    android:id="@+id/tvMyOwnParking"
+                    android:text="My Own Parking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginBasex3"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Text TextSource, Converter = Language, ConverterParameter = MyOwnParkingText" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/llCredits"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                local:MvxBind="Click GotoCreditsCommand">
+                <ImageView
+                    android:id="@+id/ivCredits"
+                    android:layout_width="@dimen/marginBasex12"
+                    android:layout_height="@dimen/marginBasex12"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginBasex5"
+                    android:background="@drawable/menu_credits" />
+                <TextRegular
+                    android:id="@+id/tvCredits"
+                    android:text="Wallet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/marginBasex3"
+                    android:layout_marginBottom="@dimen/marginBasex3"
+                    android:textColor="#ffffff"
+                    local:MvxBind="Text Credits, Converter=Credits" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <ImageView
+        android:id="@+id/ivSetting"
+        android:layout_marginTop="@dimen/marginBase"
+        android:layout_marginRight="@dimen/marginBase"
+        android:layout_width="@dimen/marginBasex10"
+        android:layout_height="@dimen/marginBasex10"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/marginBasex2"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/white_icon_setting"
+        local:MvxBind="Click GotoSettingsCommand" />
+<!--</LinearLayout>-->
+</RelativeLayout>

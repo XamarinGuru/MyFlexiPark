@@ -1,0 +1,26 @@
+﻿{
+	"PageTitle": "",
+	"BackTitle" : "Back",
+	"OfferMinutesText" :  "minutes offers to join your destination",
+	"AddressText" : "Address",
+	"CostText" : "Cost",
+	"StartTimeText" : "Start time",
+	"EndTimeText" : "End time",
+	"VehicleText" : "Vehicle",
+	"NavigateText" : "Navigate",
+	"LeaveText" : "Leave",
+	"ReportText" : "Report",
+	"LeaveThisParkingText" : "Are you sure you want to leave this parking ?",
+	"ReportThisParkingText" : "Are you sure you want to report this parking?",
+"PleaseSelectText" : "Please select an option",
+"WhichNavigationTypeText" : "Which navigation type do you want to use ?",
+"UsingNativeMapText" : "Using Native Map",
+"UsingWazeText" : "Using Waze",
+"UsingGoogleMapsText" : "Using Google Maps",
+"UsingNavmiiText" : "Using Navmii",
+"CancelText" : "Cancel",
+
+	
+   
+
+}

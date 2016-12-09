@@ -1,0 +1,14 @@
+﻿{
+	"PageTitle": "Add Vehicle",
+	"EditVehicleText": "Edit Vehicle",
+	"AddVehicleText": "Add Vehicle",
+	"BackTitle" : "Back",
+	"AddText" : "Add fr",
+	"EditText" : "Edit fr",
+	"PlateNumberText" : "Plate Number",
+	"CityCarText" : "city car",
+	"berlineSedanText" : "berline/sedan",
+	"PleaseEnterPlateNumberText" : "Please enter a plate number",
+	"PleaseChooseVehicleTypeText" : "Please choose a vehicle type",
+	
+}

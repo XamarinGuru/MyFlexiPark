@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:background="@color/bg"
+    android:layout_height="fill_parent">
+  <LinearLayout
+      android:orientation="horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="?android:attr/actionBarSize"
+      android:background="#2487c8">
+    <RelativeLayout
+        android:id="@+id/rlBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_centerVertical="true"
+        local:MvxBind="Click BackCommand">
+      <ImageView
+          android:id="@+id/ivBack"
+          android:layout_width="@dimen/marginBasex5"
+          android:layout_height="@dimen/marginBasex5"
+          android:layout_centerVertical="true"
+          android:layout_marginLeft="@dimen/marginBasex2"
+          android:background="@drawable/white_icon_back" />
+      <TextNeueBold
+          android:text="Back"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_toRightOf="@+id/ivBack"
+          android:layout_centerVertical="true"
+          android:textColor="#ffffffff"
+          android:textSize="@dimen/textMediumLarge"
+          local:MvxBind=" Text TextSource, Converter = Language, ConverterParameter = BackTitle" />
+    </RelativeLayout>
+    <TextViewWithFont
+        android:text="Spot Calendar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="@dimen/marginBasex2"
+        android:layout_centerInParent="true"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/textMediumLarge"
+        local:MvxBind="Font 'helvetica-neue-bold.ttf';Text TextSource, Converter = Language, ConverterParameter = PageTitle" />
+    <TextNeueBold
+        android:id="@+id/tvToday"
+        android:text="Today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/marginBasex2"
+        android:textColor="#ffffffff"
+        android:textSize="@dimen/textMediumLarge"
+        local:MvxBind="Click TodayCommand; Text TextSource, Converter = Language, ConverterParameter = TodayText" />
+  </LinearLayout>
+  <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      <android.support.v4.app.FragmentTabHost
+          android:id="@android:id/tabhost"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+          <TabWidget
+              android:id="@android:id/tabs"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_weight="0" />
+          <FrameLayout
+              android:id="@android:id/tabcontent"
+              android:layout_width="0dp"
+              android:layout_height="0dp"
+              android:layout_weight="0" />
+          <FrameLayout
+              android:id="@+id/realtabcontent"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1" />
+        </LinearLayout>
+      </android.support.v4.app.FragmentTabHost>
+      <ImageView
+          android:id="@+id/ivAdd"
+          android:layout_marginBottom="@dimen/marginBase"
+          android:layout_marginTop="@dimen/marginBase"
+           android:layout_width="@dimen/marginBasex10"
+      android:layout_height="@dimen/marginBasex10"
+          android:src="@drawable/blue_icon_add"
+          android:layout_gravity="bottom|right"
+          android:layout_marginRight="@dimen/marginBasex2"
+          local:MvxBind="Click AddNewEventCommand" />
+    </FrameLayout>
+  </LinearLayout>
+</LinearLayout>

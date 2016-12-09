@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="@dimen/marginBasex2"
+    android:paddingTop="@dimen/marginBasex2"
+    android:background="@drawable/listselector"
+    android:gravity="center_vertical"
+    android:padding="@dimen/marginBasex2"
+    android:orientation="horizontal"
+    android:descendantFocusability="blocksDescendants"
+    android:focusable="false">
+    <TextRegular
+        android:text="2 PM"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:singleLine="false"
+        android:gravity="right"
+        android:hint="10:10 PM"
+        android:textSize="@dimen/textMediumLarge"
+        local:MvxBind="Text , Converter = EventItemTitleAndDateConverter" />
+    <FrameLayout
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="@dimen/marginBasex2">
+        <TextRegular
+            android:text="Name"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textColor="#808080"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Text , Converter = EventItemTitleAndDateConverter, ConverterParameter = 'Title'; Visible , Converter = EventRedGrayConverter, ConverterParameter = 'booking'" />
+        <TextRegular
+            android:text="Name"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textColor="#FF0000"
+            android:textSize="@dimen/textMediumLarge"
+            local:MvxBind="Text , Converter = EventItemTitleAndDateConverter, ConverterParameter = 'Title'; Visible , Converter = EventRedGrayConverter " />
+    </FrameLayout>
+    <LinearLayout
+        android:layout_width="@dimen/marginBasex5"
+        android:layout_height="@dimen/marginBasex5"
+        android:layout_marginLeft="@dimen/marginBasex2"
+        android:layout_gravity="center_vertical"
+        android:orientation="vertical">
+        <FrameLayout
+            android:layout_width="@dimen/marginBasex5"
+            android:layout_height="@dimen/marginBasex5"
+            android:layout_gravity="center_vertical"
+            local:MvxBind="Visible , Converter = IsShowDeleteConverter">
+            <MagicImageView
+                android:id="@+id/ivDelete"
+                android:layout_gravity="center_vertical"
+                android:layout_width="@dimen/marginBasex5"
+                android:layout_height="@dimen/marginBasex5"
+                android:background="@drawable/white_icon_delete"
+                local:MvxBind="Click DeleteEventCommand " />
+        </FrameLayout>
+    </LinearLayout>
+</LinearLayout>

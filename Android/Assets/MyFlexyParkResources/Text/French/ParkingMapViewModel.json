@@ -1,0 +1,18 @@
+﻿{
+	"MinuteText": "minute fr",
+	"MinutesText": "minutes fr",
+	"HourText": "heure",
+	"HoursText": "heures",
+	"SecondText": "second fr",
+	"SecondsText": "Seconds fr",
+	"RecenterText": "RE-CENTER fr",
+	"CalculatingText": "Calculating fr",
+	
+	"PageTitle": "",
+	"BackTitle" : "Retour",
+	"StartText" : "Démarrer",
+	"OverviewText" : "Aperçu global",
+	"ResumeText" : "Résumé",
+	"SummaryText" : "Résumé",
+	"MapText" : "Carte",
+}

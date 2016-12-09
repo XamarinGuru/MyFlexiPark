@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="cZE-iV-UFb" customClass="StepCell">
+            <rect key="frame" x="0.0" y="0.0" width="188" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="188" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="751" text="150" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PIE-tt-7mS">
+                        <rect key="frame" x="83" y="4" width="22" height="16"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="j31-nF-CQg">
+                        <rect key="frame" x="20" y="23" width="138" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="34" id="gXQ-z3-nfK"/>
+                        </constraints>
+                        <string key="text">Instruction
+a
+a</string>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="11"/>
+                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XhX-J3-bFb">
+                        <rect key="frame" x="187" y="0.0" width="1" height="60"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="1" id="L3B-cQ-dbe"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="PIE-tt-7mS" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" constant="4" id="0nu-CI-qM5"/>
+                <constraint firstItem="j31-nF-CQg" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" constant="20" id="Jhl-gN-cVS"/>
+                <constraint firstAttribute="bottom" secondItem="XhX-J3-bFb" secondAttribute="bottom" id="R9E-9c-WoJ"/>
+                <constraint firstAttribute="trailing" secondItem="j31-nF-CQg" secondAttribute="trailing" constant="30" id="UJ1-eN-eI5"/>
+                <constraint firstItem="j31-nF-CQg" firstAttribute="top" secondItem="PIE-tt-7mS" secondAttribute="bottom" constant="3" id="iIY-Gf-cr7"/>
+                <constraint firstItem="XhX-J3-bFb" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" id="pQc-xL-tCU"/>
+                <constraint firstAttribute="centerX" secondItem="PIE-tt-7mS" secondAttribute="centerX" id="rIE-r6-JAa"/>
+                <constraint firstAttribute="trailing" secondItem="XhX-J3-bFb" secondAttribute="trailing" id="rxQ-9W-Yrp"/>
+            </constraints>
+            <size key="customSize" width="188" height="88"/>
+            <connections>
+                <outlet property="lbDistance" destination="PIE-tt-7mS" id="H9R-TK-aYP"/>
+                <outlet property="lbInstruction" destination="j31-nF-CQg" id="7t4-Kc-ljL"/>
+            </connections>
+            <point key="canvasLocation" x="241" y="371"/>
+        </collectionViewCell>
+    </objects>
+</document>

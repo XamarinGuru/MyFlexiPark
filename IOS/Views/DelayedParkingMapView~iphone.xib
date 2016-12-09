@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DelayedParkingMapView">
+            <connections>
+                <outlet property="view" destination="iN0-l3-epB" id="kCW-yf-GMq"/>
+                <outlet property="webView" destination="mgT-XJ-ANm" id="name-outlet-mgT-XJ-ANm"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aWG-yA-7Vx">
+                    <color key="backgroundColor" red="0.09223233163356781" green="0.092229574918746948" blue="0.092231146991252899" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="DdA-IP-Ng0"/>
+                    </constraints>
+                </view>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgT-XJ-ANm">
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" red="0.09223233163356781" green="0.092229574918746948" blue="0.092231146991252899" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="mgT-XJ-ANm" secondAttribute="trailing" id="EPZ-SR-9Vx"/>
+                <constraint firstItem="mgT-XJ-ANm" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="gK7-zW-bjI"/>
+                <constraint firstAttribute="bottom" secondItem="mgT-XJ-ANm" secondAttribute="bottom" id="koO-d3-rnu"/>
+                <constraint firstItem="aWG-yA-7Vx" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="nP8-fv-LuR"/>
+                <constraint firstItem="aWG-yA-7Vx" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pkz-0t-jxS"/>
+                <constraint firstAttribute="trailing" secondItem="aWG-yA-7Vx" secondAttribute="trailing" id="sfA-XH-b4O"/>
+                <constraint firstItem="mgT-XJ-ANm" firstAttribute="top" secondItem="aWG-yA-7Vx" secondAttribute="bottom" id="wsQ-dr-ULR"/>
+            </constraints>
+            <point key="canvasLocation" x="371" y="439"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>

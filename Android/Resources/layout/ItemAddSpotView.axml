@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayoutClickable xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/marginBasex4"
+    android:paddingLeft="@dimen/marginBasex2"
+    android:paddingBottom="@dimen/marginBasex4"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/listselector"
+    local:MvxBind="IsClickable Enabled">
+    <BindableImageView
+        android:layout_width="@dimen/marginBasex5"
+        android:layout_height="@dimen/marginBasex5"
+        local:MvxBind="ImageResource Title, Converter = TitleToDrawableConverter" />
+    <TextRegular
+        android:text="Name"
+        android:layout_marginLeft="@dimen/marginBasex2"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:layout_height="wrap_content"
+        android:textColor="#ffffff"
+        android:lines="1"
+        android:textSize="@dimen/textMediumLarge"
+        local:MvxBind="Text Title; TextColor Enabled, Converter = ColorConverter" />
+<!--android:textColor="#ffffffff"-->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right">
+        <ImageView
+            android:layout_width="@dimen/marginBasex4"
+            android:layout_height="@dimen/marginBasex4"
+            android:src="@drawable/white_icon_next"
+            android:layout_marginRight="@dimen/marginBasex2"
+            local:MvxBind="Visible IsShowArrow" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Please wait..."
+            android:textColor="#ffffff"
+            android:layout_marginRight="@dimen/marginBasex2"
+            local:MvxBind="Visible IsShowPleaseWait; Text TextSource, Converter = Language, ConverterParameter = PleaseWaitText" />
+        <ImageView
+            android:layout_width="@dimen/marginBasex4"
+            android:layout_height="@dimen/marginBasex4"
+            android:src="@drawable/blue_icon_checkmark"
+            android:layout_marginRight="@dimen/marginBasex2"
+            local:MvxBind="Visible Finished" />
+    </FrameLayout>
+</LinearLayoutClickable>

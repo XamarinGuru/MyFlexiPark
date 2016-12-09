@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- xlarge -->
+  <dimen name="marginBasex60">600dp</dimen>
+  <dimen name="marginBasex55">550dp</dimen>
+  <dimen name="marginBasex50">500dp</dimen>
+  <dimen name="marginBasex45">450dp</dimen>
+  <dimen name="marginBasex40">400dp</dimen>
+  <dimen name="marginBasex35">350dp</dimen>
+  <dimen name="marginBasex30">300dp</dimen>
+  <dimen name="marginBasex27">270dp</dimen>
+  <dimen name="marginBasex25">250dp</dimen>
+  <dimen name="marginBasex23">230dp</dimen>
+  <dimen name="marginBasex22">220dp</dimen>
+  <dimen name="marginBasex20">200dp</dimen>
+  <dimen name="marginBasex18">180dp</dimen>
+  <dimen name="marginBasex15">150dp</dimen>
+  <dimen name="marginBasex14">140dp</dimen>
+  <dimen name="marginBasex13">130dp</dimen>
+  <dimen name="marginBasex12">120dp</dimen>
+  <dimen name="marginBasex11">110dp</dimen>
+  <dimen name="marginBasex10">100dp</dimen>
+  <dimen name="marginBasex9">90dp</dimen>
+  <dimen name="marginBasex8">80dp</dimen>
+  <dimen name="marginBasex7">70dp</dimen>
+  <dimen name="marginBasex6">60dp</dimen>
+  <dimen name="marginBasex5">50dp</dimen>
+  <dimen name="marginBasex4">40dp</dimen>
+  <dimen name="marginBasex3.5">35dp</dimen>
+  <dimen name="marginBasex3">30dp</dimen>
+  <dimen name="marginBasex2">20dp</dimen>
+  <dimen name="marginBase">10dp</dimen>
+  <dimen name="marginBase.6">6dp</dimen>
+  <dimen name="marginBase.5">5dp</dimen>
+  <dimen name="textHeader">39sp</dimen>
+  <dimen name="textBigger">47sp</dimen>
+  <dimen name="textBig">43sp</dimen>
+  <dimen name="textMediumBig">39sp</dimen>
+  <dimen name="textExtraLarge">35sp</dimen>
+  <dimen name="textLarge">31sp</dimen>
+  <dimen name="textMediumLarge">27sp</dimen>
+  <dimen name="textMedium">24sp</dimen>
+  <dimen name="textSmall">21sp</dimen>
+  <dimen name="textExtraSmall">18sp</dimen>
+  <dimen name="textXXSmall">16sp</dimen>
+
+  <dimen name="menu_width">450dp</dimen>
+
+</resources>

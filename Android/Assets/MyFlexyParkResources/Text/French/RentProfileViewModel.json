@@ -1,0 +1,12 @@
+﻿{
+    "PageTitle":  "Acheter crédits",
+   "CreditCardNumberText" :  "Numéro de carte de crédit:",
+   "CreditCardHolderNameText" : "Propriétaire de la carte:",
+   "CreditCardCryptogramText" :  "Cryptogram de la carte:",
+   "ValidityText" : "Validité:",
+   "PickText" :  "Sélectionner",
+   "VehicleManagementText" :  "Gestion du véhicule",
+	"PaymentConfigurationText" : "Configuration du payement",
+    "BuyText" : "Acheter now",
+    "CreditsText" : "Crédits",
+}

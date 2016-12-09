@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginRight="@dimen/marginBasex2"
+    android:layout_marginLeft="@dimen/marginBasex2"
+    android:layout_marginTop="@dimen/marginBasex2"
+    android:layout_marginBottom="@dimen/marginBasex2"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_Dialog">
+<!--FlexyPark.UI.Droid.Controls.TextRegular-->
+    <FlexyPark.UI.Droid.Controls.TextNeueBold
+        android:id="@+id/title"
+        android:paddingTop="@dimen/marginBasex2"
+        android:paddingBottom="@dimen/marginBase"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/marginBase"
+        android:text="Message"
+        android:gravity="center"
+        android:textSize="@dimen/textLarge"
+        android:textColor="#000000" />
+    <FlexyPark.UI.Droid.Controls.TextRegular
+        android:id="@+id/message"
+        android:paddingTop="@dimen/marginBase"
+        android:paddingBottom="@dimen/marginBasex2"
+        android:paddingLeft="@dimen/marginBasex2"
+        android:paddingRight="@dimen/marginBasex2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Message"
+        android:gravity="center"
+        android:textSize="@dimen/textMediumLarge"
+        android:textColor="#000000" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/view1"
+                    android:layout_marginTop="@dimen/marginBasex2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#77777b"
+                    android:visibility="gone" />
+                <FlexyPark.UI.Droid.Controls.TextRegular
+                    android:paddingTop="@dimen/marginBasex2"
+                    android:paddingBottom="@dimen/marginBasex2"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:id="@+id/option1"
+                    android:visibility="gone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose 1"
+                    android:gravity="center"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#007aff"
+                    android:background="@drawable/itemselector" />
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#77777b"
+                    android:visibility="gone" />
+                <FlexyPark.UI.Droid.Controls.TextRegular
+                    android:paddingTop="@dimen/marginBasex2"
+                    android:paddingBottom="@dimen/marginBasex2"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:id="@+id/option2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose 2"
+                    android:gravity="center"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#007aff"
+                    android:visibility="gone"
+                    android:background="@drawable/itemselector" />
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#77777b"
+                    android:visibility="gone" />
+                <FlexyPark.UI.Droid.Controls.TextRegular
+                    android:paddingTop="@dimen/marginBasex2"
+                    android:paddingBottom="@dimen/marginBasex2"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:id="@+id/option3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose 3"
+                    android:gravity="center"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#007aff"
+                    android:visibility="gone"
+                    android:background="@drawable/itemselector" />
+                <View
+                    android:id="@+id/view4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#77777b"
+                    android:visibility="gone" />
+                <FlexyPark.UI.Droid.Controls.TextRegular
+                    android:paddingTop="@dimen/marginBasex2"
+                    android:paddingBottom="@dimen/marginBasex2"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:id="@+id/option4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose 3"
+                    android:gravity="center"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#007aff"
+                    android:visibility="gone"
+                    android:background="@drawable/itemselector" />
+                <View
+                    android:id="@+id/view5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#77777b"
+                    android:visibility="gone" />
+                <FlexyPark.UI.Droid.Controls.TextRegular
+                    android:paddingTop="@dimen/marginBasex2"
+                    android:paddingBottom="@dimen/marginBasex2"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:id="@+id/option5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose 1"
+                    android:gravity="center"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#007aff"
+                    android:visibility="gone"
+                    android:background="@drawable/itemselector" />
+                <View
+                    android:id="@+id/view6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#77777b"
+                    android:visibility="gone" />
+                <FlexyPark.UI.Droid.Controls.TextRegular
+                    android:paddingTop="@dimen/marginBasex2"
+                    android:paddingBottom="@dimen/marginBasex2"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:id="@+id/option6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose 2"
+                    android:gravity="center"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#007aff"
+                    android:visibility="gone"
+                    android:background="@drawable/itemselector" />
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#77777b"
+                    android:visibility="gone" />
+                <FlexyPark.UI.Droid.Controls.TextRegular
+                    android:paddingTop="@dimen/marginBasex2"
+                    android:paddingBottom="@dimen/marginBasex2"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:id="@+id/option7"
+                    android:layout_width="fill_parent"
+                    android:background="@drawable/itemselector"
+                    android:layout_height="wrap_content"
+                    android:text="Choose 3"
+                    android:gravity="center"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#007aff"
+                    android:visibility="gone" />
+                <View
+                    android:id="@+id/view8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="2dp"
+                    android:background="#77777b"
+                    android:visibility="gone" />
+                <FlexyPark.UI.Droid.Controls.TextRegular
+                    android:paddingTop="@dimen/marginBasex2"
+                    android:paddingBottom="@dimen/marginBasex2"
+                    android:paddingLeft="@dimen/marginBasex2"
+                    android:paddingRight="@dimen/marginBasex2"
+                    android:id="@+id/option8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Choose 3"
+                    android:background="@drawable/itemselector"
+                    android:gravity="center"
+                    android:textSize="@dimen/textMediumLarge"
+                    android:textColor="#007aff"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <View
+            android:id="@+id/viewCancel"
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#77777b"
+            android:visibility="gone" />
+        <FlexyPark.UI.Droid.Controls.TextNeueBold
+            android:paddingTop="@dimen/marginBasex2"
+            android:paddingBottom="@dimen/marginBasex2"
+            android:paddingLeft="@dimen/marginBasex2"
+            android:paddingRight="@dimen/marginBasex2"
+            android:id="@+id/optionCancel"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose 4"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:background="@drawable/itemselectorcornor"
+            android:textSize="@dimen/textMediumLarge"
+            android:textColor="#007aff"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>
